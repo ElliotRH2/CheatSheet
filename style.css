@@ -6,7 +6,8 @@ body {
 /* Header */
 .header {
     overflow: hidden;
-    background: linear-gradient(to right, rgb(100, 100, 255), rgb(255, 158, 46));
+    background: linear-gradient(to right, rgb(82, 82, 255), rgb(255, 123, 46));
+    /* background-color: rgb(204, 204, 204); */
     padding: 20px 10px;
     margin-bottom: 50px;
 }
