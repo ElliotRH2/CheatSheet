@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../style.css">
+   <link rel="stylesheet" href="sheet_Style.css">
+   <title>Document</title>
+</head>
+<body>
+   <header>
+      <div class="header">
+         <a href="#default" class="logo">CheatSheet</a>
+         <div class="header-right">
+            <a class="active" href="../index.html">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+         </div>
+      </div>
+  </header>
+
+   <div class="preview-container">
+      <div class="preview-top">
+         <h2>Css</h2>
+         <button onclick="copyCode()">Copy code</button>
+      </div>
+      <div class="preview"><pre id="code">
+const TweenService = game.GetService("TweenService");
+
+const part = new Instance("Part");
+part.Position = new Vector3(0, 10, 0);
+part.Color = new Color3(1, 0, 0);
+part.Anchored = true;
+part.Parent = game.Workspace;
+         
+const goal = {};
+goal.Position = new Vector3(10, 10, 0);
+goal.Color = new Color3(0, 1, 0);
+
+const tweenInfo = new TweenInfo(5);
+         
+const tween = TweenService.Create(part, tweenInfo, goal);
+         
+tween.Play();
+      </pre></div>
+   </div>
+   <script src="script.js"></script>
+</body>
+</html>
