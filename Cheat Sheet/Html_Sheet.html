@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="sheet_Style.css">
+   <link rel="stylesheet" href="sheet_Style.css">  
    <title>Document</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
       <div class="sidelist">
          <div class="sidelist-item"><a href="#">Overview</a></div>
          <div class="sidealist-item" id="Dropdown">
-            <a href="#"><img src="arrow_down.svg" alt="">Example</a>
+            <a href="#"><img src="Assets/Vfx/arrow.svg" alt="">Example</a>
             <div class = "dropdown">
                <a href="#ItemTest"><div>Item</div></a>
                <a href="#ItemTest"><div>Item</div></a>
@@ -32,7 +32,7 @@
             </div>
          </div>
          <div class="sidealist-item" id="Dropdown">
-            <a href="#"><img src="arrow_down.svg" alt="">Advanced</a>
+            <a href="#"><img src="Assets/Vfx/arrow.svg" alt="">Advanced</a>
             <div class = "dropdown">
                <a href="#ItemTest"><div>Item</div></a>
                <a href="#ItemTest"><div>Item</div></a>
@@ -45,75 +45,40 @@
    </aside>
 
    <div class="main">
-      <h1>The aside element - Styled with CSS</h1>
-      <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
-
-      <aside>
-      <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-      </aside>
-
-      <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
-      <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
       <div class="preview-container">
          <div class="preview-top">
-            <h2>Css</h2>
-            <button onclick="copyCode()">Copy code</button>
+            <h2>Html</h2>
+            <div class="preview-mode">
+               
+            </div>
+            <div class="preview-options">
+               <button id="Copy_Code">Copy</button>
+               <button id="Preview_Code">Preview</button>
+            </div>
          </div>
-         <div class="preview"><pre id="code">
-const TweenService = game.GetService("TweenService");
-
-const part = new Instance("Part");
-part.Position = new Vector3(0, 10, 0);
-part.Color = new Color3(1, 0, 0);
-part.Anchored = true;
-part.Parent = game.Workspace;
-
-const goal = {};
-goal.Position = new Vector3(10, 10, 0);
-goal.Color = new Color3(0, 1, 0);
-
-const tweenInfo = new TweenInfo(5);
-        
-const tween = TweenService.Create(part, tweenInfo, goal);
-        
-tween.Play();
-         </pre></div>
+         <div class="preview">
+            <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
+            <pre id="code"></pre></div>
       </div>
-      <iframe id="customFrame" style="border: 5px solid black; width: 80vw; height: 85vh; background-color: rgb(255, 255, 255);"></iframe>
-   </div>
-   <script src="sheet.js"></script>
-   <div class="preview">
-      <pre id="code"></pre>
-   </div>
-   
-   <script>
-      var preElement = document.getElementById("code");
-      var iframe = document.getElementById("customFrame");
-      
-      var htmlString = `<!DOCTYPE html>
-<html lang="en">
-<head>
-   <head>
-      <style>
-         h2 {
-            background-color: black;
-            color: wheat;
-         }
-      </style>
-   </head>
-</head>
-<body>
-   <h2>HEllo!</h2>
-</body>
-</html>`;
 
-      preElement.textContent = htmlString;
-      var doc = iframe.contentDocument || iframe.contentWindow.document;
-      
-      doc.open();
+      <div class="preview-container">
+         <div class="preview-top">
+            <h2>Html/Css</h2>
+            <div class="preview-mode">
+               
+            </div>
+            <div class="preview-options">
+               <button id="Copy_Code">Copy</button>
+               <button id="Preview_Code">Preview</button>
+            </div>
+         </div>
+         <div class="preview">
+            <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
+            <pre id="code_2"></pre></div>
+      </div>
+   </div>
 
-      doc.write(htmlString);
-      doc.close();
-   </script>
+   <script src="Assets/Js/Sheet Previews/Html_Previews.js"></script>
+   <script src="Assets/Js/Sheet.js"></script>
 </body>
 </html>
