@@ -10,6 +10,7 @@ function copyCode() {
 function toggle(item) {
    var dropdown = item.querySelector(".dropdown");
    var arrow = item.querySelector("img");
+   console.log(item);
    
    if (!(dropdown === null || arrow === null)) {
       if (dropdown.style.display == "none") {

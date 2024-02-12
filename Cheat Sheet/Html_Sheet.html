@@ -8,14 +8,14 @@
    <title>Document</title>
 </head>
 <body>
-   <header class="header">
+   <div class="header">
       <a href="#default" class="logo">CheatSheet</a>
       <div class="header-right">
          <a class="active" href="../index.html">Home</a>
          <a href="#contact">Contact</a>
          <a href="#about">About</a>
       </div>
-   </header>
+   </div>
 
    <aside class="sidenav">
       <a href="#about" class="sidenav-header"><div>Css</div></a>
@@ -79,7 +79,20 @@ const tween = TweenService.Create(part, tweenInfo, goal);
 tween.Play();
          </pre></div>
       </div>
-   </div> 
+      <iframe id="customFrame" style="width: 80vw; height: 85vh; background-color: red;"></iframe>
+   </div>
    <script src="sheet.js"></script>
+   <script>
+      var iframe = document.getElementById("customFrame");
+      
+      var doc = iframe.contentDocument || iframe.contentWindow.document;
+      
+      doc.open();
+
+      doc.write(`
+<h2 style="color: blue">Title</h2>
+`);
+      doc.close();
+   </script>
 </body>
 </html>
