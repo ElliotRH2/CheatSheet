@@ -3,13 +3,46 @@ body {
     margin: 0;
 }
 
+.mainTitle {
+    display: flex;
+    justify-content: center;
+    color: #222;
+}
+
 /* Header */
+
+/* 
+.mainTitle {
+    background: linear-gradient(to right, rgba(82, 82, 255, 1), rgb(82, 82, 255), rgb(255, 123, 46));
+    background-size: 600% 600%;
+
+    -webkit-animation: gradientAnimation 10s ease infinite;
+    -moz-animation: gradientAnimation 10s ease infinite;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@-webkit-keyframes gradientAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes gradientAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes gradientAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+*/
+
 .header {
     overflow: hidden;
-    background: linear-gradient(to right, rgb(82, 82, 255), rgb(255, 123, 46));
-    /* background-color: rgb(204, 204, 204); */
+    background: linear-gradient(to right, rgb(82, 82, 255), rgb(186, 82, 255), rgb(255, 123, 46));
     padding: 20px 10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
   
 .header a {
@@ -112,7 +145,6 @@ body {
 
 .awardContainer hr {
     border: 2px solid #ffffff;
-    border-radius: 5px;
 }
 
 .popupText {
