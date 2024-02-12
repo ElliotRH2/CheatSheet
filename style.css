@@ -9,6 +9,18 @@ body {
     color: #222;
 }
 
+.infoContainer {
+    background-color: #222;
+    width: 59.5%;
+    margin: 0 auto;
+}
+
+.infoContainer p {
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
 /* Header */
 
 /* 
