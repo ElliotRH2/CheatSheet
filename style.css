@@ -11,7 +11,7 @@ body {
 
 .infoContainer {
     background-color: #222;
-    width: 59.5%;
+    width: 60.8%;
     margin: 0 auto;
 }
 
@@ -21,9 +21,7 @@ body {
     text-align: center;
 }
 
-/* Header */
-
-/* 
+/* Gradient animation 
 .mainTitle {
     background: linear-gradient(to right, rgba(82, 82, 255, 1), rgb(82, 82, 255), rgb(255, 123, 46));
     background-size: 600% 600%;
@@ -50,11 +48,15 @@ body {
 }
 */
 
+/* Header */
 .header {
     overflow: hidden;
     background: linear-gradient(to right, rgb(82, 82, 255), rgb(186, 82, 255), rgb(255, 123, 46));
     padding: 20px 10px;
     margin-bottom: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
   
 .header a {
@@ -127,6 +129,10 @@ body {
     width: 300px;
 }
 
+.awardImg {
+  padding: 10px;
+}
+
 .awardImg img {
     width: 300px;
     height: auto;
@@ -162,7 +168,7 @@ body {
 .popupText {
     opacity: 0;
     position: absolute;
-    top: 48%;
+    top: 62%;
     left: 90%;
     transform: translateX(-50%);
     max-width: 90%;
@@ -200,9 +206,10 @@ body {
 
 /* Footer */
   footer {
-    background-color: #121315;
+    background-color: #222;
     color: #a7a7a7;
     font-size: 16px;
+    margin-top: 500px;
   }
   footer * {
     font-family: "Poppins", sans-serif;
