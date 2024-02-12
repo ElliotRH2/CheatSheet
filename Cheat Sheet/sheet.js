@@ -7,25 +7,25 @@ function copyCode() {
    });
 }
 
-var anchor = document.getElementById("Dropdown");
-var dropdowns = document.querySelectorAll(".dropdown");
-var test = false;
-
-anchor.addEventListener("click", function(event) {
-   console.log(event, test);
-   if (test == false) {
-      test = true;
-
-      anchor.querySelector("img").src = "arrow.svg";
-      dropdowns.forEach(function(dropdown) {
-         dropdown.style.display = "none";
-      });
-   } else {
-      test = false;
-
-      anchor.querySelector("img").src = "arrow_down.svg";
-      dropdowns.forEach(function(dropdown) {
+function toggle(item) {
+   var dropdown = item.querySelector(".dropdown");
+   var arrow = item.querySelector("img");
+   
+   if (!(dropdown === null || arrow === null)) {
+      if (dropdown.style.display == "none") {
+         arrow.src = "arrow_down.svg";
          dropdown.style.display = "block";
-      });
-   };
+      } else {
+         arrow.src = "arrow.svg";
+         dropdown.style.display = "none";
+      };
+   }
+}
+
+document.querySelectorAll(".sidelist #Dropdown").forEach(function(item) {
+   toggle(item);
+
+   item.addEventListener("click", function() {
+      toggle(this);
+   });
 });
