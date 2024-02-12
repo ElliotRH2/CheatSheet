@@ -79,19 +79,40 @@ const tween = TweenService.Create(part, tweenInfo, goal);
 tween.Play();
          </pre></div>
       </div>
-      <iframe id="customFrame" style="width: 80vw; height: 85vh; background-color: red;"></iframe>
+      <iframe id="customFrame" style="border: 5px solid black; width: 80vw; height: 85vh; background-color: rgb(255, 255, 255);"></iframe>
    </div>
    <script src="sheet.js"></script>
+   <div class="preview">
+      <pre id="code"></pre>
+   </div>
+   
    <script>
+      var preElement = document.getElementById("code");
       var iframe = document.getElementById("customFrame");
       
+      var htmlString = `<!DOCTYPE html>
+<html lang="en">
+<head>
+   <head>
+      <style>
+         h2 {
+            background-color: black;
+            color: wheat;
+         }
+      </style>
+   </head>
+</head>
+<body>
+   <h2>HEllo!</h2>
+</body>
+</html>`;
+
+      preElement.textContent = htmlString;
       var doc = iframe.contentDocument || iframe.contentWindow.document;
       
       doc.open();
 
-      doc.write(`
-<h2 style="color: blue">Title</h2>
-`);
+      doc.write(htmlString);
       doc.close();
    </script>
 </body>
