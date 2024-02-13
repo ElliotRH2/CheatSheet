@@ -46,8 +46,12 @@ document.querySelectorAll(".preview [id^='code']").forEach(function(item) {
    if (header && iframe) {
       const copyButton = header.querySelector("#Copy_Code");
       const previewButton = header.querySelector("#Preview_Code");
+      const editButton = header.querySelector("#Edit_Code");
+      const resetButton = header.querySelector("#Reset_Code");
 
-      const dataForCode = getPreview("Html", item.id);
+      let editingMode = false;
+
+      const dataForCode = getPreview(item.id);
       if (dataForCode) {
          item.textContent = dataForCode;
       }
@@ -65,6 +69,11 @@ document.querySelectorAll(".preview [id^='code']").forEach(function(item) {
       }
 
       function togglePreview() {
+         if (editingMode === true)
+         {
+            editMode(false)
+         }
+         
          if (item.style.display === "none") {
             item.style.display = "";
             iframe.style.display = "none";
@@ -95,6 +104,44 @@ document.querySelectorAll(".preview [id^='code']").forEach(function(item) {
          }
       }
 
+      function editMode(bool) {
+         if (item.style.display === "none") {
+            togglePreview();
+         }
+
+         if ((bool !== true && editingMode === true) || bool === true) {
+            item.contentEditable = "false";
+            editingMode = false;
+            editButton.style.backgroundColor = "";
+         } else {
+            item.contentEditable = "true";
+            editingMode = true;
+            editButton.style.backgroundColor = "green";
+         }
+      }
+
+      function resetCode() {
+         if (editingMode === true)
+         {
+            editMode(false)
+         }
+         if (item.style.display === "none") {
+            togglePreview();
+            item.textContent = dataForCode;
+            togglePreview();
+         } else {
+            item.textContent = dataForCode;
+         }
+      }
+      
+      if (editButton) {
+         editButton.addEventListener('click', editMode);
+      }
+
+      if (resetButton) {
+         resetButton.addEventListener('click', resetCode);
+      }
+
       if (previewButton) {
          previewButton.addEventListener('click', togglePreview);
 
@@ -114,7 +161,6 @@ document.querySelectorAll(".preview [id^='code']").forEach(function(item) {
 function toggle(item) {
    var dropdown = item.querySelector(".dropdown");
    var arrow = item.querySelector("img");
-   console.log(item);
 
    if (!(dropdown === null || arrow === null)) {
       if (dropdown.style.display == "none") {

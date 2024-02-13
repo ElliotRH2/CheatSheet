@@ -1,12 +1,20 @@
 const HTML_PrewiesData = {
-   "code": `<!DOCTYPE html>
+/* 1st Code Preview: */
+"code_1": `<!DOCTYPE html>
 <html lang="en">
+<head>
+  <title>Title of the document</title>
+</head>
 <body>
-   <h1>Hello World!</h1>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
 </body>
 </html>`,
 
-   "code_2": `<!DOCTYPE html>
+/* 2nd Code Preview: */
+"code_2": `<!DOCTYPE html>
 <html lang="en">
 <head>
    <head>
@@ -21,9 +29,18 @@ const HTML_PrewiesData = {
 <body>
    <h1>Hello World!</h1>
 </body>
+</html>`,
+
+/* 3rd Code Preview: */
+"code_3": `<!DOCTYPE html>
+<html lang="en">
+<body>
+   <h1>Hello World!</h1>
+   <h2> Why the fuck are you so, Elliot.</h2>
+</body>
 </html>`
 };
 
-function getPreview(sheet, id) {
+function getPreview(id) {
    return HTML_PrewiesData[id];
 }

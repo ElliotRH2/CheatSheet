@@ -186,3 +186,26 @@ body a {
    margin: 0.75rem;
    overflow: auto;
 }
+
+aside {
+  width: auto;
+  font-style: italic;
+  background-color: rgba(211, 211, 211, 0);
+}
+
+.aside_left {
+   float: left;
+}
+.aside_right {
+   float: right;
+}
+
+.main_Card {
+   margin-top: 1rem;
+   height: 65vh;
+}
+
+.main_Card .Title, .main_Card .Description, .main_Card .Note {
+   margin-left: 1rem;
+   padding-right: 1rem;
+}

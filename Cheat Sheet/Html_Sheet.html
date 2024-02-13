@@ -11,18 +11,28 @@
    <div class="header">
       <a href="#default" class="logo">CheatSheet</a>
       <div class="header-right">
-         <a class="active" href="../index.html">Home</a>
-         <a href="#contact">Contact</a>
-         <a href="#about">About</a>
+         <a href="../index.html">Home</a>
+         <a href="Css_Sheet.html">CSS</a>
+         <a class="active">HTML</a>
       </div>
    </div>
 
-   <aside class="sidenav">
+   <div class="sidenav">
       <a href="#about" class="sidenav-header"><div>Css</div></a>
       <div class="sidelist">
-         <div class="sidelist-item"><a href="#">Overview</a></div>
+         <div class="sidelist-item"><a href="#">Introduction</a></div>
          <div class="sidealist-item" id="Dropdown">
-            <a href="#"><img src="Assets/Vfx/arrow.svg" alt="">Example</a>
+            <a><img src="Assets/Vfx/arrow.svg" alt="">Tags</a>
+            <div class = "dropdown">
+               <a href="#Basic"><div>Basic</div></a>
+               <a href="#ItemTest"><div>Item</div></a>
+               <a href="#ItemTest"><div>Item</div></a>
+               <a href="#ItemTest"><div>Item</div></a>
+               <a href="#ItemTest"><div>Item</div></a>
+            </div>
+         </div>
+         <div class="sidealist-item" id="Dropdown">
+            <a><img src="Assets/Vfx/arrow.svg" alt="">Advanced</a>
             <div class = "dropdown">
                <a href="#ItemTest"><div>Item</div></a>
                <a href="#ItemTest"><div>Item</div></a>
@@ -31,53 +41,112 @@
                <a href="#ItemTest"><div>Item</div></a>
             </div>
          </div>
-         <div class="sidealist-item" id="Dropdown">
-            <a href="#"><img src="Assets/Vfx/arrow.svg" alt="">Advanced</a>
-            <div class = "dropdown">
-               <a href="#ItemTest"><div>Item</div></a>
-               <a href="#ItemTest"><div>Item</div></a>
-               <a href="#ItemTest"><div>Item</div></a>
-               <a href="#ItemTest"><div>Item</div></a>
-               <a href="#ItemTest"><div>Item</div></a>
-            </div>
-         </div>
       </div>
-   </aside>
+   </div>
 
-   <div class="main">
-      <div class="preview-container">
-         <div class="preview-top">
-            <h2>Html</h2>
-            <div class="preview-mode">
-               
-            </div>
-            <div class="preview-options">
-               <button id="Copy_Code">Copy</button>
-               <button id="Preview_Code">Preview</button>
-            </div>
+   <div class="main" style="height: 1000vh;">
+      <div class="main_Card" id="Introduction">
+         <div class="Title"><code>&lt;html&gt;</code> Html Element</div>
+         <div class="Description">
+            <p>The &lt;html&gt; tag represents the root of an HTML document.</p>
+
+            <p>The &lt;html&gt; tag is the container for all other HTML elements (except for the &lt;!DOCTYPE&gt; tag).</p>
          </div>
-         <div class="preview">
-            <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
-            <pre id="code"></pre></div>
-      </div>
-
-      <div class="preview-container">
-         <div class="preview-top">
-            <h2>Html/Css</h2>
-            <div class="preview-mode">
-               
+         <div class="preview-container">
+            <div class="preview-top">
+               <h2>Html</h2>
+               <div class="preview-mode">
+                  
+               </div>
+               <div class="preview-options">
+                  <button id="Copy_Code">Copy</button>
+                  <button id="Preview_Code">Preview</button>
+                  <button id="Edit_Code">Edit</button>
+                  <button id="Reset_Code">Reset</button>
+               </div>
             </div>
-            <div class="preview-options">
-               <button id="Copy_Code">Copy</button>
-               <button id="Preview_Code">Preview</button>
-            </div>
+            <div class="preview">
+               <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
+               <pre id="code_1"></pre></div>
          </div>
-         <div class="preview">
-            <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
-            <pre id="code_2"></pre></div>
+         <div class="Note">
+            <p>Note: You should always include the lang attribute inside the &lt;html&gt; tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</p>
+         </div>
+         
       </div>
+      
+      <div class="main_Card" id="Introduction">
+         <div class="Title"><code>&lt;html&gt;</code> Html Element</div>
+         <div class="Description">
+            <p>The &lt;html&gt; tag represents the root of an HTML document.</p>
 
-      <button id="code_2" style="width: 20vw; height: 5vh;">Test External Activation</button>
+            <p>The &lt;html&gt; tag is the container for all other HTML elements (except for the &lt;!DOCTYPE&gt; tag).</p>
+         </div>
+         <div class="preview-container">
+            <div class="preview-top">
+               <h2>Html</h2>
+               <div class="preview-mode">
+                  
+               </div>
+               <div class="preview-options">
+                  <button id="Copy_Code">Copy</button>
+                  <button id="Preview_Code">Preview</button>
+                  <button id="Edit_Code">Edit</button>
+                  <button id="Reset_Code">Reset</button>
+               </div>
+            </div>
+            <div class="preview">
+               <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
+               <pre id="code_1"></pre></div>
+         </div>
+         <div class="Note">
+            <p>Note: You should always include the lang attribute inside the &lt;html&gt; tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</p>
+         </div>
+         
+      </div>
+      
+      <button id="code_1" style="width: 20vw; height: 5vh;">Test External Activation</button>
+      <aside class="aside_right" id="Basic_Tags">
+         <div class="preview-container">
+            <div class="preview-top">
+               <h2>Html</h2>
+               <div class="preview-mode">
+                  
+               </div>
+               <div class="preview-options">
+                  <button id="Copy_Code">Copy</button>
+                  <button id="Preview_Code">Preview</button>
+                  <button id="Edit_Code">Edit</button>
+                  <button id="Reset_Code">Reset</button>
+               </div>
+            </div>
+            <div class="preview">
+               <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
+               <pre id="code_2"></pre></div>
+         </div>
+      </aside>
+      <aside class="aside_left">
+         <div class="preview-container">
+            <div class="preview-top">
+               <h2>Html</h2>
+               <div class="preview-mode">
+                  
+               </div>
+               <div class="preview-options">
+                  <button id="Copy_Code">Copy</button>
+                  <button id="Preview_Code">Preview</button>
+                  <button id="Edit_Code">Edit</button>
+                  <button id="Reset_Code">Reset</button>
+               </div>
+            </div>
+            <div class="preview">
+               <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
+               <pre id="code_3"></pre></div>
+         </div>
+      </aside>
+      <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+      <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+      
    </div>
 
    <script src="Assets/Js/Sheet Previews/Html_Previews.js"></script>
