@@ -177,6 +177,22 @@ body {
    height: 200px;
  }
 
+ .colorContainer {
+   display: flex;
+   justify-content: center;
+ }
+
+ #rgbValues {
+   display: flex;
+   justify-content: center;
+ }
+
+ #colorPicker {
+   border-radius: none;
+   position: absolute;
+   border-color: #222;
+ }
+
 /* CSS HTML cards */
 .row {
     display: flex;
