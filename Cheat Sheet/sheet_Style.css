@@ -197,7 +197,9 @@ aside {
    float: left;
 }
 .aside_right {
+   position: absolute;
    float: right;
+   bottom: -900vh;
 }
 
 .main_Card {
@@ -207,5 +209,5 @@ aside {
 
 .main_Card .Title, .main_Card .Description, .main_Card .Note {
    margin-left: 1rem;
-   padding-right: 1rem;
+   padding-right: 0.5rem;
 }

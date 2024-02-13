@@ -20,7 +20,7 @@
    <div class="sidenav">
       <a href="#about" class="sidenav-header"><div>Css</div></a>
       <div class="sidelist">
-         <div class="sidelist-item"><a href="#">Introduction</a></div>
+         <div class="sidelist-item"><a href="#Introduction">Introduction</a></div>
          <div class="sidealist-item" id="Dropdown">
             <a><img src="Assets/Vfx/arrow.svg" alt="">Tags</a>
             <div class = "dropdown">
@@ -45,12 +45,10 @@
    </div>
 
    <div class="main" style="height: 1000vh;">
-      <div class="main_Card" id="Introduction">
-         <div class="Title"><code>&lt;html&gt;</code> Html Element</div>
+      <div class="main_Card">
+         <div class="Title" id="Introduction"><code>&lt;html&gt;</code> Html Element</div>
          <div class="Description">
-            <p>The &lt;html&gt; tag represents the root of an HTML document.</p>
-
-            <p>The &lt;html&gt; tag is the container for all other HTML elements (except for the &lt;!DOCTYPE&gt; tag).</p>
+            <p>The &lt;html&gt; tag represents the root of an HTML document, and is the container for all other HTML elements (except for the &lt;!DOCTYPE&gt; tag).</p>
          </div>
          <div class="preview-container">
             <div class="preview-top">
@@ -59,40 +57,10 @@
                   
                </div>
                <div class="preview-options">
-                  <button id="Copy_Code">Copy</button>
                   <button id="Preview_Code">Preview</button>
                   <button id="Edit_Code">Edit</button>
                   <button id="Reset_Code">Reset</button>
-               </div>
-            </div>
-            <div class="preview">
-               <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
-               <pre id="code_1"></pre></div>
-         </div>
-         <div class="Note">
-            <p>Note: You should always include the lang attribute inside the &lt;html&gt; tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</p>
-         </div>
-         
-      </div>
-      
-      <div class="main_Card" id="Introduction">
-         <div class="Title"><code>&lt;html&gt;</code> Html Element</div>
-         <div class="Description">
-            <p>The &lt;html&gt; tag represents the root of an HTML document.</p>
-
-            <p>The &lt;html&gt; tag is the container for all other HTML elements (except for the &lt;!DOCTYPE&gt; tag).</p>
-         </div>
-         <div class="preview-container">
-            <div class="preview-top">
-               <h2>Html</h2>
-               <div class="preview-mode">
-                  
-               </div>
-               <div class="preview-options">
                   <button id="Copy_Code">Copy</button>
-                  <button id="Preview_Code">Preview</button>
-                  <button id="Edit_Code">Edit</button>
-                  <button id="Reset_Code">Reset</button>
                </div>
             </div>
             <div class="preview">
@@ -106,7 +74,7 @@
       </div>
       
       <button id="code_1" style="width: 20vw; height: 5vh;">Test External Activation</button>
-      <aside class="aside_right" id="Basic_Tags">
+      <aside class="aside_right" id="Basic">
          <div class="preview-container">
             <div class="preview-top">
                <h2>Html</h2>
@@ -118,6 +86,7 @@
                   <button id="Preview_Code">Preview</button>
                   <button id="Edit_Code">Edit</button>
                   <button id="Reset_Code">Reset</button>
+                  <button id="Copy_Code">Copy</button>
                </div>
             </div>
             <div class="preview">
@@ -151,5 +120,7 @@
 
    <script src="Assets/Js/Sheet Previews/Html_Previews.js"></script>
    <script src="Assets/Js/Sheet.js"></script>
+
+   <script src="Assets/Js/scroll.js"></script>
 </body>
 </html>
