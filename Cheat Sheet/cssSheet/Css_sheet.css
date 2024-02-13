@@ -172,6 +172,11 @@ body {
    white-space: pre-line;
  }
 
+ #colorDiv {
+   width: 600px;
+   height: 200px;
+ }
+
 /* CSS HTML cards */
 .row {
     display: flex;
