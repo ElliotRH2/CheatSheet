@@ -187,10 +187,20 @@ body {
    justify-content: center;
  }
 
+ #hexValue {
+   display: flex;
+   justify-content: center;
+ }
+
  #colorPicker {
    border-radius: none;
    position: absolute;
    border-color: #222;
+ }
+
+ .example {
+   display: flex;
+   justify-content: center;
  }
 
 /* CSS HTML cards */
