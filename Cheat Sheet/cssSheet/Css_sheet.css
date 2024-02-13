@@ -6,7 +6,8 @@ body {
 .mainTitle {
     display: flex;
     justify-content: center;
-    color: #222;
+    color: #3A3B3C;
+    margin-bottom: 30px;
 }
 
 /* Header */
@@ -158,8 +159,17 @@ body {
  }
 
  .infoContainer {
-     display: flex;
-     justify-content: center;
+     margin-left: 100px;
+ }
+
+ .title1 {
+   position: relative;
+   top: 10px;
+   color: #3A3B3C;
+ }
+
+ .selectorsInfo {
+   white-space: pre-line;
  }
 
 /* CSS HTML cards */

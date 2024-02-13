@@ -24,13 +24,135 @@
         </h1>
     </div>
 
-<div class="infoContainer">
-      <p>
-         Content
-      </p>
-   </div>
+    <hr>
 
-   
+<div class="infoContainer">
+   <h1 class="title1">Selectors </h1>
+   <p class="selectorsInfo">
+      1. **Universal Selector:**<br>
+      - `*`: Selects all elements on the page.<br><br>
+      2. **Type Selector:**<br>
+      - `element`: Selects all elements of a specific type (e.g., `div`, `p`, `h1`, etc.).<br><br>
+      3. **Class Selector:**<br>
+      - `.classname`: Selects all elements with the specified class name (e.g., `.container`, `.button`, etc.).<br><br>
+      4. **ID Selector:**<br>
+      - `#idname`: Selects a single element with the specified ID (IDs must be unique) (e.g., `#header`, `#main`, etc.).<br><br>
+      5. **Descendant Selector:**<br>
+      - `ancestor descendant`: Selects all descendants of the ancestor element (e.g., `ul li`, selects all `li` elements that are descendants of `ul` elements).<br><br>
+      6. **Child Selector:**<br>
+      - `parent > child`: Selects all direct children of the parent element (e.g., `ul > li`, selects all `li` elements that are direct children of `ul` elements).<br><br>
+      7. **Adjacent Sibling Selector:**<br>
+      - `element + sibling`: Selects an element that is immediately preceded by a specified sibling element (e.g., `h2 + p`, selects all `p` elements that are immediately preceded by `h2` elements).<br><br>
+      8. **General Sibling Selector:**<br>
+      - `element ~ sibling`: Selects all sibling elements that follow a specified element (e.g., `h2 ~ p`, selects all `p` elements that follow `h2` elements).<br><br>
+      9. **Attribute Selector:**<br>
+      - `[attribute]`: Selects all elements with the specified attribute (e.g., `[type]`, selects all elements with a `type` attribute).<br>
+      - `[attribute=value]`: Selects elements with the specified attribute and value (e.g., `[type=text]`, selects all elements with `type` attribute equal to `text`).<br><br>
+      10. **Pseudo-class Selector:**<br>
+      - `:hover`: Selects an element when you hover over it with the mouse.<br>
+      - `:active`: Selects an element when it is being activated (e.g., clicked).<br>
+      - `:focus`: Selects an element when it has focus.<br>
+      - `:nth-child(n)`: Selects elements based on their position within a parent element.<br>
+      - `:first-child`: Selects the first child element of its parent.<br>
+      - `:last-child`: Selects the last child element of its parent.<br><br>
+   </p>
+</div>
+<hr>
+
+<div class="infoContainer">
+<h1 class="title1">CSS Properties</h1>
+   <p class="selectorsInfo">
+    1. **Font Properties:**<br>
+     - `font-family`: Sets the font family for text.<br>
+     - `font-size`: Sets the size of the font.<br>
+     - `font-weight`: Sets the boldness of the font.<br>
+     - `font-style`: Sets the style of the font (italic, oblique, etc.).<br><br>
+
+    2. **Color and Background Properties:**<br>
+     - `color`: Sets the text color.<br>
+     - `background-color`: Sets the background color.<br>
+     - `opacity`: Sets the opacity level of an element.<br><br>
+
+    3. **Layout Properties:**<br>
+     - `width`: Sets the width of an element.<br>
+     - `height`: Sets the height of an element.<br>
+     - `margin`: Sets the margin around an element.<br>
+     - `padding`: Sets the padding inside an element.<br>
+     - `display`: Sets how an element is displayed (block, inline, etc.).<br><br>
+
+    4. **Border and Outline Properties:**<br>
+     - `border`: Sets the border around an element.<br>
+     - `border-radius`: Sets the radius of the border corners.<br>
+     - `outline`: Sets an outline around an element.<br><br>
+
+    5. **Positioning Properties:**<br>
+     - `position`: Sets the positioning method of an element (relative, absolute, fixed, etc.).<br>
+     - `top`, `right`, `bottom`, `left`: Sets the position of an element relative to its containing element.<br>
+     - `z-index`: Sets the stack order of an element.<br><br>
+
+    6. **Text Properties:**<br>
+     - `text-align`: Sets the horizontal alignment of text.<br>
+     - `text-decoration`: Sets the decoration of text (underline, line-through, etc.).<br>
+     - `line-height`: Sets the height of a line of text.<br>
+     - `word-spacing`: Sets the spacing between words.<br>
+     - `letter-spacing`: Sets the spacing between characters.<br><br>
+
+    7. **Box Model Properties:**<br>
+     - `box-sizing`: Sets how the total width and height of an element are calculated.<br>
+     - `overflow`: Sets what to do when an element's content is too big to fit in its box.<br>
+     - `visibility`: Sets the visibility of an element (hidden, visible, etc.).<br><br>
+
+    8. **Flexbox Properties:**<br>
+     - `flex-direction`: Sets the direction of the main axis in a flex container.<br>
+     - `justify-content`: Sets how flex items are aligned along the main axis.<br>
+     - `align-items`: Sets how flex items are aligned along the cross axis.<br>
+     - `flex-grow`, `flex-shrink`, `flex-basis`: Sets the flex grow, shrink, and basis of a flex item.<br><br>
+
+    9. **Grid Properties:**<br>
+     - `grid-template-columns`, `grid-template-rows`: Sets the size of grid tracks in a grid container.<br>
+     - `grid-column`, `grid-row`: Sets the start and end positions of a grid item.<br>
+     - `grid-gap`: Sets the size of the gap between grid rows and columns.<br><br>
+
+    10. **Animation and Transition Properties:**<br>
+     - `animation`: Sets the keyframe-based animations to be applied to an element.<br>
+     - `transition`: Sets the transition effects to be applied when a CSS property changes.<br><br>
+  </p>
+</div>
+<hr>
+
+<div class="infoContainer">
+   <h1 class="title1">Media Queries</h1>
+   <p class="selectorsInfo">
+      1. **Screen Width:**<br>
+     - `@media screen and (max-width: 768px) { ... }`: Applies styles when the screen width is 768 pixels or less.<br>
+     - `@media screen and (min-width: 1024px) { ... }`: Applies styles when the screen width is 1024 pixels or more.<br><br>
+
+    2. **Device Orientation:**<br>
+     - `@media screen and (orientation: landscape) { ... }`: Applies styles when the device is in landscape orientation.<br>
+     - `@media screen and (orientation: portrait) { ... }`: Applies styles when the device is in portrait orientation.<br><br>
+
+    3. **Device Resolution:**<br>
+     - `@media screen and (min-resolution: 300dpi) { ... }`: Applies styles when the device has a minimum resolution of 300 dots per inch.<br>
+     - `@media screen and (max-resolution: 96dpi) { ... }`: Applies styles when the device has a maximum resolution of 96 dots per inch.<br><br>
+
+    4. **Viewport Width:**<br>
+     - `@media (max-width: 600px) { ... }`: Applies styles when the viewport width is 600 pixels or less.<br>
+     - `@media (min-width: 768px) { ... }`: Applies styles when the viewport width is 768 pixels or more.<br><br>
+
+    5. **Device Type:**<br>
+     - `@media handheld { ... }`: Applies styles when the device is a handheld device (e.g., mobile phones).<br>
+     - `@media print { ... }`: Applies styles when the document is being printed.<br><br>
+
+    6. **Aspect Ratio:**<br>
+     - `@media screen and (aspect-ratio: 16/9) { ... }`: Applies styles when the aspect ratio is 16:9.<br>
+     - `@media screen and (aspect-ratio: 4/3) { ... }`: Applies styles when the aspect ratio is 4:3.<br><br>
+
+    7. **Combining Queries:**<br>
+     - `@media screen and (min-width: 768px) and (max-width: 1024px) { ... }`: Applies styles when the screen width is between 768 and 1024 pixels.<br>
+     - `@media screen and (orientation: landscape) and (max-width: 768px) { ... }`: Applies styles when the screen width is 768 pixels or less and the device is in landscape orientation.<br><br>
+   </p>
+</div>
+<hr>
 
 <div class="preview-container">
    <div class="preview-top">
