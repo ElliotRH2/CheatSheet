@@ -59,7 +59,7 @@ background-color: #RRGGBB; /* Background color */
 background-image: url('image.jpg'); /* Background image */
 background-size: cover; /* Cover background */
 background-position: center; /* Center background */
-background-repeat: no-repeat; /* Prevent background repetition */background-repeat: no-repeat; /* Prevent background repetition */background-repeat: no-repeat; /* Prevent background repetition */background-repeat: no-repeat; /* Prevent background repetition */
+background-repeat: no-repeat; /* Prevent background repetition */background-repeat: no-repeat; /* Prevent background repetition */background-repeat: no-repeat; /* Prevent background repetition */
 
 /* Text */
 font-family: Arial, sans-serif; /* Font family */
