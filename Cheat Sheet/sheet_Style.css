@@ -221,7 +221,20 @@ body a {
    margin: 0.75rem;
    height: 100%;
    overflow: hidden;
+   overflow-x: scroll;
 }
+
+.preview-container pre::-webkit-scrollbar {
+   width: 10px;
+}
+.preview-container pre::-webkit-scrollbar-thumb {
+   background-color: #464646;
+   border-radius: 10px;
+}
+.preview-container pre::-webkit-scrollbar-thumb:hover {
+   background-color: #262626;
+}
+ 
 
 aside {
   width: auto;

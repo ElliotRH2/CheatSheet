@@ -44,6 +44,18 @@ document.querySelectorAll(".preview [id^='code']").forEach(function(item) {
    const iframe = item.parentNode.querySelector("iframe");
 
    if (header && iframe) {
+      item.addEventListener('wheel', (e) => {
+         e.preventDefault();
+         
+         const newScrollTop = item.scrollTop + 100 * Math.sign(e.deltaY);
+         
+         const minScrollTop = 0;
+         const maxScrollTop = item.scrollHeight - item.clientHeight;
+         const boundedScrollTop = Math.max(minScrollTop, Math.min(maxScrollTop, newScrollTop));
+         
+         item.scrollTop = boundedScrollTop;
+      });
+
       const copyButton = header.querySelector("#Copy_Code");
       const previewButton = header.querySelector("#Preview_Code");
       const editButton = header.querySelector("#Edit_Code");
