@@ -64,37 +64,49 @@ document.querySelectorAll(".preview [id^='code']").forEach(function(item) {
          });
       }
 
+      function togglePreview() {
+         if (item.style.display === "none") {
+            item.style.display = "";
+            iframe.style.display = "none";
+
+            previewButton.style.backgroundColor = "";
+         } else
+         {
+            const rect = item.getBoundingClientRect();
+      
+            iframe.style.width = rect.width + 'px';
+            iframe.style.height = rect.height + 'px';
+            iframe.style.backgroundColor = 'white';
+            iframe.style.margin = '0.75rem';
+            iframe.style.marginBottom = '0';
+            iframe.style.borderBottomLeftRadius = "10px";
+            iframe.style.borderBottomRightRadius = "10px";
+      
+            item.style.display = "none";
+            iframe.style.display = "";
+            
+            var doc = iframe.contentDocument || iframe.contentWindow.document;
+            
+            doc.open();
+            doc.write(item.textContent);
+            doc.close();
+
+            previewButton.style.backgroundColor = "green";
+         }
+      }
+
       if (previewButton) {
-         previewButton.addEventListener('click', function() {
-            if (item.style.display === "none") {
-               item.style.display = "";
-               iframe.style.display = "none";
+         previewButton.addEventListener('click', togglePreview);
 
-               previewButton.style.backgroundColor = "";
-            } else
-            {
-               const rect = item.getBoundingClientRect();
-         
-               iframe.style.width = rect.width + 'px';
-               iframe.style.height = rect.height + 'px';
-               iframe.style.backgroundColor = 'white';
-               iframe.style.margin = '0.75rem';
-               iframe.style.marginBottom = '0';
-               iframe.style.borderBottomLeftRadius = "10px";
-               iframe.style.borderBottomRightRadius = "10px";
-         
-               item.style.display = "none";
-               iframe.style.display = "";
-               
-               var doc = iframe.contentDocument || iframe.contentWindow.document;
-               
-               doc.open();
-               doc.write(item.textContent);
-               doc.close();
-
-               previewButton.style.backgroundColor = "green";
-            }
+         var external_PreviewButtons = Array.from(document.querySelectorAll(`[id="${item.id}"]`)).filter(function(element) {
+            return !grandParent.contains(element);
          });
+         
+         if (external_PreviewButtons.length > 0) {
+            external_PreviewButtons.forEach(function(element) {
+               element.addEventListener('click', togglePreview);
+           });
+         }
       }
    }
 });
