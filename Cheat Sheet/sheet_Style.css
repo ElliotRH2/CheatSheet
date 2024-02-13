@@ -1,7 +1,7 @@
 /* Import font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap");
 
-body {
+html, body {
    font-family: "Poppins", sans-serif;
    margin: 0;
 }
@@ -12,13 +12,29 @@ body a {
 
 /* Header */
 .header {
+   overflow: hidden;
+   /* background: linear-gradient(to right, rgb(82, 82, 255), rgb(186, 82, 255), rgb(255, 123, 46)); */
+   background-color: rgb(82, 82, 255);
+   padding: 20px 10px;
+   margin-bottom: 30px;
    position: sticky;
    top: 0;
-   overflow: hidden;
-   background: linear-gradient(to right, rgb(82, 82, 255), rgb(186, 82, 255), rgb(255, 123, 46));
-   padding: 20px 10px;
-   height: 6.8vh;
-   z-index: 9999;
+   z-index: 1000;
+}
+
+.logo img {
+ width: 10%;
+ height: 100%;
+ margin: 0px;
+ padding: 0px;
+ position: absolute;
+}
+
+.logo {
+ margin: 0px;
+ padding: 0px;
+ width: 10%;
+ height: 10%;
 }
  
 .header a {
@@ -26,6 +42,7 @@ body a {
    color: rgb(255, 255, 255);
    text-align: center;
    padding: 12px;
+   text-decoration: none;
    font-size: 18px;
    line-height: 25px;
    border-radius: 4px;
@@ -40,14 +57,25 @@ body a {
    background-color: #ddd;
    color: black;
 }
-
+ 
 .header a.active {
-   background-color: rgb(82, 82, 255);
+   background-color: dodgerblue;
    color: white;
 }
-
+ 
 .header-right {
    float: right;
+}
+ 
+@media screen and (max-width: 500px) {
+.header a {
+     float: none;
+     display: block;
+     text-align: left;
+   }
+.header-right {
+     float: none;
+   }
 }
 
 .sidenav {
@@ -125,11 +153,12 @@ body a {
 
 .main {
    margin-left: calc(15rem + 15px);
+   margin-right: 15px;
 }
 
 .preview-container {
    background-color: #0D0D0D;
-   width: 30rem;
+   width: auto;
    height: auto;
    margin: 1rem;
    border-radius: 10px;
@@ -202,12 +231,113 @@ aside {
    bottom: -900vh;
 }
 
-.main_Card {
+.mainCard_Centre {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    margin-top: 1rem;
-   height: 65vh;
+   height: auto;
+}.mainCard_Centre .Title, .mainCard_Centre .Description, .mainCard_Centre .Note {
+   text-align: center;
+   width: 50%;
 }
 
-.main_Card .Title, .main_Card .Description, .main_Card .Note {
-   margin-left: 1rem;
-   padding-right: 0.5rem;
+.mainCard_Centre .preview-container {
+   max-width: 500px;
+   width: 100%;
+}
+
+.mainCard_Right {
+   display: grid;
+   margin-top: 1rem;
+   height: auto;
+
+   grid-template-columns: 1fr 1fr;
+   grid-column-start: 1;
+   grid-column-end: 3;
+   grid-row-start: 1;
+   grid-row-end: 4;
+}
+.mainCard_Right .Title {
+   text-align: center;
+
+   grid-column-start: 1;
+   grid-column-end: 3;
+   grid-row-start: 1;
+   grid-row-end: 2;
+}
+.mainCard_Right .Description {
+   text-align: end;
+   padding-left: 6rem;
+
+   grid-column-start: 1;
+   grid-column-end: 1;
+   grid-row-start: 2;
+   grid-row-end: 3;
+}
+.mainCard_Right .preview-container {
+   max-width: 500px;
+   width: 80%;
+   
+   grid-column-start: 2;
+   grid-column-end: 3;
+   grid-row-start: 2;
+   grid-row-end: 4;
+}
+.mainCard_Right .Note {
+   text-align: end;
+   padding-left: 6rem;
+
+   grid-column-start: 1;
+   grid-column-end: 1;
+   grid-row-start: 3;
+   grid-row-end: 3;
+}
+
+
+.mainCard_Left {
+   display: grid;
+   margin-top: 1rem;
+   height: auto;
+
+   grid-template-columns: 1fr 1fr;
+   grid-column-start: 1;
+   grid-column-end: 3;
+   grid-row-start: 1;
+   grid-row-end: 4;
+}
+.mainCard_Left .Title {
+   text-align: center;
+
+   grid-column-start: 1;
+   grid-column-end: 3;
+   grid-row-start: 1;
+   grid-row-end: 2;
+}
+.mainCard_Left .Description {
+   text-align: start;
+
+   grid-column-start: 3;
+   grid-column-end: 2;
+   grid-row-start: 2;
+   grid-row-end: 3;
+}
+.mainCard_Left .preview-container {
+   grid-column-start: 1;
+   grid-column-end: 2;
+   grid-row-start: 2;
+   grid-row-end: 4;
+}
+.mainCard_Left .Note {
+   text-align: start;
+   width: 90%;
+
+   grid-column-start: 2;
+   grid-column-end: 3;
+   grid-row-start: 3;
+   grid-row-end: 3;
+}
+
+@media screen and (max-width: 500px) {
+   
 }
