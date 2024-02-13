@@ -9,49 +9,11 @@ body {
     color: #222;
 }
 
-.infoContainer {
-    background-color: #222;
-    width: 60.8%;
-    margin: 0 auto;
-}
-
-.infoContainer p {
-    color: white;
-    padding: 5px;
-    text-align: center;
-}
-
-/* Gradient animation 
-.mainTitle {
-    background: linear-gradient(to right, rgba(82, 82, 255, 1), rgb(82, 82, 255), rgb(255, 123, 46));
-    background-size: 600% 600%;
-
-    -webkit-animation: gradientAnimation 10s ease infinite;
-    -moz-animation: gradientAnimation 10s ease infinite;
-    animation: gradientAnimation 10s ease infinite;
-}
-
-@-webkit-keyframes gradientAnimation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes gradientAnimation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes gradientAnimation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-*/
-
 /* Header */
 .header {
     overflow: hidden;
-    background: linear-gradient(to right, rgb(82, 82, 255), rgb(186, 82, 255), rgb(255, 123, 46));
+    /* background: linear-gradient(to right, rgb(82, 82, 255), rgb(186, 82, 255), rgb(255, 123, 46)); */
+    background-color: rgb(82, 82, 255);
     padding: 20px 10px;
     margin-bottom: 30px;
     position: sticky;
@@ -195,6 +157,11 @@ body {
     overflow: auto;
  }
 
+ .infoContainer {
+     display: flex;
+     justify-content: center;
+ }
+
 /* CSS HTML cards */
 .row {
     display: flex;
@@ -275,7 +242,8 @@ body {
   
   .copyright {
     padding: 0.3em 1em;
-    background: linear-gradient(to right, rgb(82, 82, 255), rgb(186, 82, 255), rgb(255, 123, 46));
+    /* background: linear-gradient(to right, rgb(82, 82, 255), rgb(186, 82, 255), rgb(255, 123, 46)); */
+    background-color: rgb(82, 82, 255);
   }
   .footer-menu{
     float: left;
