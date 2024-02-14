@@ -26,7 +26,7 @@
     </div>
 
     <div class="infoContainer">
-        <p>Learn the basics of HTML and CSS by using these simple guides</p>
+        <p>Learn the basics of <span class="autoType"></span></p>
     </div>
 
     <div class="row">
@@ -107,6 +107,27 @@
           </div>
            <p>Copyright &copy; 2024 CheatSheet</p>
         </div>
-        </footer>
+   </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   <script>
+      var autoType = document.querySelector(".autoType")
+      
+      var typed = new Typed(".autoType", {
+         strings: ["HTML", "CSS"],
+         typeSpeed: 75,
+         backSpeed: 75,
+         loop: true,
+         preStringTyped: (self) => {
+            if (self == 0) {
+               autoType.style.color = "rgb(255, 123, 46)";
+            } else {
+               autoType.style.color = "rgb(82, 82, 255)";
+            }
+         },
+      })
+      
+      console.log(typed);
+   </script>
 </body>
 </html>

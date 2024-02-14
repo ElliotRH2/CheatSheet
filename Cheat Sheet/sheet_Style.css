@@ -41,10 +41,10 @@ body a {
    color: rgb(255, 255, 255);
    text-align: center;
    padding: 12px;
-   text-decoration: none;
    font-size: 18px;
    line-height: 25px;
    border-radius: 4px;
+   transition: background-color 0.3s ease, color 0.3s ease;
 }
  
 .header a.logo {
@@ -100,13 +100,13 @@ body a {
 
 .sidelist a {
    padding: 6px 8px 6px 16px;
-   text-decoration: none;
    font-size: 20px;
    color: #818181;
    display: block;
    display: flex;
    align-items: center;
    gap: 10px;
+   transition: background-color 0.15s ease, color 0.1s ease;
 }
 
 .sidelist img {
@@ -365,4 +365,109 @@ aside {
 
 @media screen and (max-width: 500px) {
    
+}
+
+/* Footer */
+footer {
+   margin-left: 15rem;
+   background-color: #222;
+   color: #a7a7a7;
+   font-size: 16px;
+   margin-top: 500px;
+}
+footer * {
+   font-family: "Poppins", sans-serif;
+   box-sizing: border-box;
+   border: none;
+   outline: none;
+}
+footer .row {
+   display: flex;
+   justify-content: space-evenly;
+   padding: 1em 1em;
+}
+footer .row.primary {
+   display: flex;
+   justify-content: center;
+}
+footer .column {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   padding: 0 2em;
+   min-height: 15em;
+}
+footer h3 {
+   width: 100%;
+   text-align: left;
+   color: white;
+   font-size: 1em;
+   white-space: nowrap;
+}
+footer ul {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   padding: 0;
+   margin: 0;
+}
+footer li:not(:first-child) {
+   margin-top: 0.8em;
+}
+footer ul li a {
+   color: #a7a7a7;
+}
+footer ul li a:hover {
+   color: #fff;
+}
+footer .about p {
+   text-align: justify;
+   line-height: 2;
+   margin: 0;
+}
+
+footer button {
+   background-color: #c7940a;
+   color: #ffffff;
+}
+footer div.social {
+   display: flex;
+   justify-content: space-around;
+   font-size: 2.4em;
+   flex-direction: row;
+   margin-top: 0.5em;
+}
+footer .social i {
+   color: #bac6d9;
+}
+
+footer .copyright {
+   padding: 0.3em 1em;
+   background: var(--html-main-colour)
+}
+footer .footer-menu{
+   float: left;
+   margin-top: 10px;
+}
+ 
+footer .footer-menu a{
+   color: #ffffff;
+   padding: 6px;
+   border-radius: 4px;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+footer .footer-menu a:hover{
+   color: black;
+   background-color: #ddd;
+}
+footer .copyright p {
+   font-size: 0.9em;
+   text-align: right;
+   color: white;
+}
+
+@media screen and (max-width: 850px) {
+   footer .row.primary {
+     grid-template-columns: 1fr;
+   }
 }
