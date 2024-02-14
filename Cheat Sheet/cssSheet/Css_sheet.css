@@ -126,7 +126,7 @@ body {
 
 .sidelist a:hover {
    color: #f1f1f1;
-   background-color: var(--css-button-colour);
+   background-color: var(--html-button-colour);
 }
 
 .dropdown {
@@ -147,7 +147,7 @@ body {
 }
 
 .dropdown a:hover {
-   background-color: var(--css-button-colour);
+   background-color: var(--html-button-colour);
 }
 
 .dropdown div {
