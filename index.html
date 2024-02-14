@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cheat Sheet/Assets/colours.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins?query=poppins">
     <title>CheatSheet</title>
@@ -120,9 +121,9 @@
          loop: true,
          preStringTyped: (self) => {
             if (self == 0) {
-               autoType.style.color = "rgb(255, 123, 46)";
+               autoType.style.color = "var(--html-main-colour)";
             } else {
-               autoType.style.color = "rgb(82, 82, 255)";
+               autoType.style.color = "var(--css-main-colour)";
             }
          },
       })

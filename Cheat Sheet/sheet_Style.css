@@ -17,7 +17,6 @@ body a {
    padding: 20px 10px;
    margin-bottom: 30px;
    position: sticky;
-   height: 6.8vh;
    top: 0;
    z-index: 1000;
 }
@@ -80,11 +79,11 @@ body a {
 }
 
 .sidenav {
-   height: calc(100vh - (6.8vh + 40px));
+   height: calc(100vh - (89px));
    width: 15rem;
    position: fixed;
    z-index: 1;
-   top: calc(6.8vh + 40px);
+   top: calc(89px);
    left: 0;
    background-color: var(--preview-secondary);
    overflow-x: hidden;
@@ -168,7 +167,7 @@ body a {
    width: auto;
    height: auto;
    max-height: 400px;
-   max-width: 39vw;
+   max-width: 575px;
    margin: 1rem;
    border-radius: 10px;
    padding-bottom: 0.25rem;
