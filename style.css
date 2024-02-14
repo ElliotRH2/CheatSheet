@@ -3,9 +3,8 @@ body {
     margin: 0;
 }
 
-html,body {
+body {
    overflow-x: hidden;
-   text-decoration: none;
 }
 
 .mainTitle {
