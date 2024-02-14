@@ -101,7 +101,7 @@ body {
 }
   
 .header a.active {
-    background-color: var(--mixed-main-colour);
+    background-color: var(--css-button-colour);
     color: white;
 }
   
