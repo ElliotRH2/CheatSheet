@@ -180,13 +180,13 @@ document.querySelectorAll(".preview [id^='code']").forEach(function(item) {
 function toggle(item) {
    var dropdown = item.querySelector(".dropdown");
    var arrow = item.querySelector("img");
-
+   
    if (!(dropdown === null || arrow === null)) {
       if (dropdown.style.display == "none") {
-         arrow.src = "./Assets/Vfx/arrow_down.svg";
+         arrow.src = "./../Assets/Vfx/arrow_down.svg";
          dropdown.style.display = "block";
       } else {
-         arrow.src = "./Assets/Vfx/arrow.svg";
+         arrow.src = "./../Assets/Vfx/arrow.svg";
          dropdown.style.display = "none";
       };
    }

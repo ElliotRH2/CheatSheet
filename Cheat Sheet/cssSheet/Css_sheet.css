@@ -10,6 +10,10 @@ body {
     margin-bottom: 30px;
 }
 
+.elliotblirfucked {
+   margin-left: calc(15rem);
+}
+
 /* Header */
 .header {
     overflow: hidden;
@@ -76,6 +80,83 @@ body {
 .header-right {
       float: none;
     }
+}
+
+/* Side Navigation */
+.sidenav {
+   height: calc(100vh - (89px));
+   width: 15rem;
+   position: fixed;
+   z-index: 1;
+   top: calc(89px);
+   left: 0;
+
+   background-color: var(--preview-secondary);
+   overflow-x: hidden;
+   color: #fff;
+}
+
+.sidenav-header div {
+   color: white;
+   font-size: 40px;
+   font-weight: bold;
+   padding-left: 0.35rem;
+   height: 3rem;
+   padding-bottom: 0.75rem;
+}
+
+.sidenav-header {text-decoration: none;}
+
+.sidelist a {
+   text-decoration: none;
+   padding: 6px 8px 6px 16px;
+   font-size: 20px;
+   color: #818181;
+   display: block;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   transition: background-color 0.15s ease, color 0.1s ease;
+}
+
+.sidelist img {
+   height: 1rem;
+}
+
+.sidelist a:hover {
+   color: #f1f1f1;
+   background-color: var(--css-button-colour);
+}
+
+.dropdown {
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+}
+
+.dropdown a {
+   margin: 0;
+   padding: 0;
+   padding-left: 1.5rem;
+   height: 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.dropdown a:hover {
+   background-color: var(--css-button-colour);
+}
+
+.dropdown div {
+   margin: 0;
+   padding: 0;
+   font-size: 15px;
+   height: 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
 }
 
 /* CSS Info */
@@ -208,6 +289,7 @@ body {
 
 /* Footer */
   footer {
+    margin-left: 15rem;
     background-color: #222;
     color: #a7a7a7;
     font-size: 16px;

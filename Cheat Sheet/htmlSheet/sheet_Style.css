@@ -78,6 +78,7 @@ body a {
    }
 }
 
+/* Side Navigation */
 .sidenav {
    height: calc(100vh - (89px));
    width: 15rem;
