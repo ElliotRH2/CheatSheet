@@ -185,11 +185,13 @@ body {
  #rgbValues {
    display: flex;
    justify-content: center;
+   cursor: pointer;
  }
 
  #hexValue {
    display: flex;
    justify-content: center;
+   cursor: pointer;
  }
 
  #colorPicker {
@@ -202,12 +204,6 @@ body {
    display: flex;
    justify-content: center;
  }
-
-/* CSS HTML cards */
-.row {
-    display: flex;
-    justify-content: space-evenly;
-}
 
 /* Footer */
   footer {
@@ -224,6 +220,8 @@ body {
   }
   .row {
     padding: 1em 1em;
+    display: flex;
+    justify-content: space-evenly;
   }
   .row.primary {
     display: flex;
