@@ -57,6 +57,11 @@ document.querySelectorAll(".preview [id^='code']").forEach(function(item) {
             item.scrollTop = boundedScrollTop;
          }
       });
+      if (item.scrollWidth > item.clientWidth) {
+         item.style.overflowX = 'scroll';
+       } else {
+         item.style.overflowX = 'hidden';
+       }
 
       const copyButton = header.querySelector("#Copy_Code");
       const previewButton = header.querySelector("#Preview_Code");

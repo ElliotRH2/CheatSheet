@@ -1,6 +1,15 @@
 :root {
+   /* CSS Themed Colours */
    --css-main-colour: rgb(82, 82, 255);
    --css-button-colour: dodgerblue;
    
+   /* HTML Themed Colours */
    --html-main-colour: rgb(255, 123, 46);
+   
+   /* Preview Pallet Colours */
+   --preview-main: #262626;
+   --preview-secondary: #0D0D0D;
+   --preview-textcolour: #bbbbbb;
+   --preview-scrollbar-main: #464646;
+   --preview-scrollbar-hover: #363636;
 }

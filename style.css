@@ -3,6 +3,10 @@ body {
     margin: 0;
 }
 
+html,body {
+   overflow-x: hidden;
+}
+
 .mainTitle {
     display: flex;
     justify-content: center;
