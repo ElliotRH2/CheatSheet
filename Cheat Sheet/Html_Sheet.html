@@ -4,7 +4,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="sheet_Style.css">  
+   <link rel="stylesheet" href="./Assets/colours.css">
+   <link rel="stylesheet" href="sheet_Style.css">
    <title>Document</title>
 </head>
 <body>
@@ -41,10 +42,38 @@
                <a href="#ItemTest"><div>Item</div></a>
             </div>
          </div>
+         <div class="sidelist-item"><a href="#Summary">Summary</a></div>
       </div>
    </div>
    
-   <div class="main" style="height: 1000vh;">
+   <div class="main">
+      <div class="mainCard_Hero">
+         <div class="Title" id="Hero">&lt;html&gt; Element</div>
+         <div class="Description">
+            <p>The &lt;html&gt; tag represents the root of an HTML document, and is the container for all other HTML elements (except for the &lt;!DOCTYPE&gt; tag).</p>
+         </div>
+         <div class="preview-container">
+            <div class="preview-top">
+               <h2>Html</h2>
+               <div class="preview-mode">
+                  
+               </div>
+               <div class="preview-options">
+                  <button id="Preview_Code">Preview</button>
+                  <button id="Edit_Code">Edit</button>
+                  <button id="Reset_Code">Reset</button>
+                  <button id="Copy_Code">Copy</button>
+               </div>
+            </div>
+            <div class="preview">
+               <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
+               <pre id="code_1"></pre></div>
+         </div>
+         <div class="Note">
+            <p>Note: You should always include the lang attribute inside the &lt;html&gt; tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</p>
+         </div>
+         
+      </div>
       <div class="mainCard_Centre">
          <div class="Title" id="Introduction">&lt;html&gt; Element</div>
          <div class="Description">
@@ -123,7 +152,6 @@
          <div class="Note">
             <p>Note: You should always include the lang attribute inside the &lt;html&gt; tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</p>
          </div>
-         
       </div>
    </div>
 

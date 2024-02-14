@@ -13,8 +13,7 @@ body a {
 /* Header */
 .header {
    overflow: hidden;
-   /* background: linear-gradient(to right, rgb(82, 82, 255), rgb(186, 82, 255), rgb(255, 123, 46)); */
-   background-color: rgb(255, 123, 46);
+   background-color: var(--html-main-colour);
    padding: 20px 10px;
    margin-bottom: 30px;
    position: sticky;
@@ -59,7 +58,7 @@ body a {
 }
  
 .header a.active {
-   background-color: dodgerblue;
+   background-color: var(--css-button-colour);
    color: white;
 }
  
@@ -154,6 +153,12 @@ body a {
 .main {
    margin-left: calc(15rem + 15px);
    margin-right: 15px;
+   display: flex;
+   flex-direction: column;
+}
+
+.mainCard_Hero, .mainCard_Centre, .mainCard_Left, .mainCard_Right {
+   margin-bottom: 30vh;
 }
 
 .preview-container {

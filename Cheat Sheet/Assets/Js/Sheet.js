@@ -45,15 +45,17 @@ document.querySelectorAll(".preview [id^='code']").forEach(function(item) {
 
    if (header && iframe) {
       item.addEventListener('wheel', (e) => {
-         e.preventDefault();
+         if (item.scrollHeight > item.clientHeight) {
+            e.preventDefault();
          
-         const newScrollTop = item.scrollTop + 100 * Math.sign(e.deltaY);
-         
-         const minScrollTop = 0;
-         const maxScrollTop = item.scrollHeight - item.clientHeight;
-         const boundedScrollTop = Math.max(minScrollTop, Math.min(maxScrollTop, newScrollTop));
-         
-         item.scrollTop = boundedScrollTop;
+            const newScrollTop = item.scrollTop + 100 * Math.sign(e.deltaY);
+            
+            const minScrollTop = 0;
+            const maxScrollTop = item.scrollHeight - item.clientHeight;
+            const boundedScrollTop = Math.max(minScrollTop, Math.min(maxScrollTop, newScrollTop));
+            
+            item.scrollTop = boundedScrollTop;
+         }
       });
 
       const copyButton = header.querySelector("#Copy_Code");
