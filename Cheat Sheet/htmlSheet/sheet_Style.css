@@ -15,7 +15,6 @@ body a {
    overflow: hidden;
    background-color: var(--html-main-colour);
    padding: 20px 10px;
-   margin-bottom: 30px;
    position: sticky;
    top: 0;
    z-index: 1000;
@@ -142,13 +141,65 @@ body a {
 
 
 .main {
+   position: relative;
    margin-left: calc(15rem + 15px);
    margin-right: 15px;
    display: flex;
    flex-direction: column;
 }
 
-.mainCard_Hero, .mainCard_Centre, .mainCard_Left, .mainCard_Right {
+.hero {
+   height: calc(100vh - 89px);
+   width: calc(100% - 15rem);
+   background-color: red;
+   padding: 0;
+   margin: 0;
+   margin-left: 15rem;
+   margin-bottom: 10vh;
+
+   background-image: url("https://img.freepik.com/free-vector/abstract-yellow-watercolor-background_1055-8919.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+
+.hero .content {
+   position: absolute;
+   height: auto;
+   min-height: 50%;
+   width: 40%;
+   top: 50%;
+   left: calc(50% + (15rem));
+   transform: translate(calc(-50% - (15rem / 2)), -30%);
+   padding: 20px;
+   background-color: rgba(255, 255, 255, 0);
+   border: 2px solid #262626;
+   border-radius: calc(5% + 30px);
+   backdrop-filter: blur(15px);
+}
+
+.hero .content h1 {
+   color: var(--css-button-colour);
+}
+
+#takeMeThere {
+   display: flex;
+   width: 40%;
+   height: 5vh;
+   color: var(--css-button-colour);
+   background-color: rgba(255, 255, 255, 0);
+   border: 2px solid #262626;
+   border-radius: 12px;
+   justify-content: center;
+   align-items: center;
+   text-decoration: none;
+}
+
+#takeMeThere:hover {
+   color: var(--css-main-colour);
+}
+
+.mainCard_Centre, .mainCard_Left, .mainCard_Right {
    margin-bottom: 30vh;
 }
 
@@ -567,7 +618,7 @@ footer .copyright p {
    }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 575px) {
    .header a {
       float: none;
       display: block;
@@ -581,6 +632,15 @@ footer .copyright p {
    }
    .sidenav {
       left: -15rem;
+   }
+   .hero {
+      width: 100%;
+      margin-left: 0;
+   }
+   .hero .content {
+      width: 80%;
+      left: 50%;
+      transform: translate(-50%, -25%);
    }
    footer {
       margin-left: 0;
