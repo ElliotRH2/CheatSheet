@@ -23,3 +23,7 @@ radiusInput.addEventListener('input', () => {
     const paddingValue = paddingInput.value + 'px';
     borderBox2.style.padding = paddingValue;
   });
+
+  
+
+  paddingBox.style.backgroundColor = '#ff7b2e';
