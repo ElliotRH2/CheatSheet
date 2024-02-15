@@ -73,3 +73,22 @@ function applyFontStyles() {
   const selectedFont = fontSelect.value;
   textElement.style.fontFamily = selectedFont;
 }
+
+const color1GradInput = document.getElementById('color1Grad');
+const color2GradInput = document.getElementById('color2Grad');
+const directionSelect = document.getElementById('direction');
+const gradientPreview = document.getElementById('gradientPreview');
+
+function updateGradient() {
+  const color1Grad = color1GradInput.value;
+  const color2Grad = color2GradInput.value;
+  const direction = directionSelect.value;
+
+  gradientPreview.style.background = `linear-gradient(${direction}, ${color1Grad}, ${color2Grad})`;
+}
+
+color1GradInput.addEventListener('input', updateGradient);
+color2GradInput.addEventListener('input', updateGradient);
+directionSelect.addEventListener('change', updateGradient);
+
+updateGradient();

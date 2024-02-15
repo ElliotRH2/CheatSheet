@@ -10,7 +10,7 @@ body {
     margin-bottom: 30px;
 }
 
-.elliotblirfucked {
+.holder {
    margin-left: calc(15rem);
 }
 
@@ -293,6 +293,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 40vh;
+
 }
 
 .containerBox2 {
@@ -321,7 +322,7 @@ body {
 .containerBox3 {
   display: flex;
   justify-content: center;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 .textElement {
@@ -330,7 +331,7 @@ body {
   background-color: #3498db;
   color: white;
   padding: 5px;
-  width: 400px;
+  width: 250px;
 }
 
 input[type="number"] {
@@ -355,6 +356,23 @@ input[type="number"] {
   display: flex;
   justify-content: center;
   color: white;
+}
+
+.containerGradient {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.gradientPreview {
+  width: 300px;
+  height: 200px;
+  margin: 20px;
+}
+
+#color1Grad, #color2Grad {
+  border: none;
 }
 
 /* Footer */
