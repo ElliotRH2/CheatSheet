@@ -66,17 +66,6 @@ body a {
 .header-right {
    float: right;
 }
- 
-@media screen and (max-width: 500px) {
-.header a {
-     float: none;
-     display: block;
-     text-align: left;
-   }
-.header-right {
-     float: none;
-   }
-}
 
 /* Side Navigation */
 .sidenav {
@@ -399,6 +388,25 @@ aside {
    padding: 8px;
    background-color: var(--preview-secondary);
    border: 0;
+   transition: background-color 0.15s ease, color 0.1s ease;
+}
+
+.summaryDropdown-subItem {
+   color: white;
+   padding: 8px;
+   background-color: var(--preview-scrollbar-hover);
+   border: 0;
+   margin: 5px;
+   border-radius: 8px;
+   transition: background-color 0.15s ease, color 0.1s ease;
+}
+
+.summaryDropdown-goto {
+   background-color: var(--preview-main);
+}
+
+.summaryDropdown-goto:hover {
+   background-color: #161616;
 }
 
 .summaryDropdown-item:hover {
@@ -409,8 +417,8 @@ aside {
 }
 
 .summaryDropdown .summaryDropdown-item:last-child {
-   border-bottom-left-radius: 15px;
-   border-bottom-right-radius: 15px;
+   border-bottom-left-radius: 8px;
+   border-bottom-right-radius: 8px;
 }
 
 /* Footer */
@@ -512,8 +520,64 @@ footer .copyright p {
    color: white;
 }
 
-@media screen and (max-width: 850px) {
-   footer .row.primary {
-     grid-template-columns: 1fr;
+@media screen and (max-width: 950px) {
+   .mainCard_Right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1rem;
+      height: auto;
+   }
+   
+   .mainCard_Right .preview-container {
+      max-width: 500px;
+      width: 100%;
+   }
+
+   
+   .mainCard_Right .Title, .mainCard_Right .Description, .mainCard_Right .Note {
+      padding: 0;
+      text-align: center;
+      width: 50%;
+   }
+   
+   .mainCard_Left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1rem;
+      height: auto;
+   }
+
+   .mainCard_Left .preview-container {
+      max-width: 500px;
+      width: 100%;
+   }
+
+   .mainCard_Left .Title, .mainCard_Left .Description, .mainCard_Left .Note {
+      padding: 0;
+      text-align: center;
+      width: 50%;
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .header a {
+      float: none;
+      display: block;
+      text-align: left;
+   }
+   .header-right {
+      float: none;
+   }
+   .main {
+      margin-left: 0;
+      margin-right: 0;
+   }
+   .sidenav {
+      left: -15rem;
+   }
+   footer {
+      margin-left: 0;
    }
 }

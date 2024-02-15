@@ -72,32 +72,73 @@ function Refresh() {
          for(var subcategory in json[category]) {
             var Id = json[category][subcategory].Id;
 
-            var contentAnchor = document.createElement("a");
-            contentAnchor.className = "summaryDropdown-item";
-            contentAnchor.textContent = subcategory;
-            contentAnchor.style.display = "none";
-            contentAnchor.href = (Id.startsWith("#") && Id !== "#") ? Id : "";
+            var contentDiv = document.createElement("div");
+            contentDiv.className = "summaryDropdown-item";
+            contentDiv.textContent = subcategory;
+            contentDiv.style.display = "none";
 
             var descDiv = document.createElement("div");
-            descDiv.className = "summaryDropdown-item";
-            descDiv.textContent = subcategory;
+            descDiv.className = "summaryDropdown-subItem";
+            descDiv.textContent = json[category][subcategory].Description;
             descDiv.style.display = "none";
+
+            contentDiv.appendChild(descDiv);
+
+            let gotoAnchor
+            if (Id.startsWith("#") && Id !== "#") {
+               gotoAnchor = document.createElement("a");
+               gotoAnchor.className = "summaryDropdown-subItem summaryDropdown-goto";
+               gotoAnchor.textContent = "Goto in-depth information";
+               gotoAnchor.style.display = "none";
+               gotoAnchor.href = (Id.startsWith("#") && Id !== "#") ? Id : "";
+
+               contentDiv.appendChild(gotoAnchor);
+            }
             
-            (function(contentAnchor, descDiv) {
+            if (gotoAnchor) {
+               descDiv.style.borderRadius = "8px 8px 0 0";
+               descDiv.style.marginBottom = "0";
+               gotoAnchor.style.borderRadius = "0 0 8px 8px";
+               gotoAnchor.style.marginTop = "0";
+            } else {
+               descDiv
+            }
+
+            (function(contentDiv, descDiv, gotoAnchor) {
+               const normalColour = getComputedStyle(document.documentElement).getPropertyValue('--preview-secondary');
+               const toggeldColour = getComputedStyle(document.documentElement).getPropertyValue('--preview-scrollbar-main');
+               let toggled = false;
+
                itemDiv.addEventListener('click', function() {
-                  contentAnchor.style.display = (contentAnchor.style.display === "none") ? "block" : "none";
+                  contentDiv.style.display = (contentDiv.style.display === "none") ? "block" : "none";
+                  contentDiv.style.backgroundColor = "";
+
                   descDiv.style.display = "none";
+                  if (gotoAnchor) {
+                     gotoAnchor.style.display = "none";
+                  }
                });
-               contentAnchor.addEventListener('click', function (event) {
-                  event.preventDefault();
+
+               contentDiv.addEventListener('click', function() {
+                  descDiv.style.display = (descDiv.style.display === "none") ? "block" : "none";
+                  contentDiv.style.backgroundColor = (descDiv.style.display === "none") ? "" : "var(--preview-scrollbar-main)";
                   
-                  var targetId = this.getAttribute('href').substring(1);
-                  smoothScroll(targetId, 1000);
+                  if (gotoAnchor) {
+                     gotoAnchor.style.display = (gotoAnchor.style.display === "none") ? "block" : "none";
+                  }
                });
-            })(contentAnchor);
+
+               if (gotoAnchor) {
+                  gotoAnchor.addEventListener('click', function (event) {
+                     event.preventDefault();
+                     
+                     var targetId = this.getAttribute('href').substring(1);
+                     smoothScroll(targetId, 1000);
+                  });
+               }
+            })(contentDiv, descDiv, gotoAnchor);
             
-            contentAnchor.appendChild(descDiv);
-            innerDiv.appendChild(contentAnchor);
+            innerDiv.appendChild(contentDiv);
          }
          
          totalRows += 1;
