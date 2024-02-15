@@ -182,6 +182,20 @@ body a {
    color: var(--css-button-colour);
 }
 
+.hero .freepik {
+   position: absolute;
+   top: 80px;
+   right: 10px;
+   color: #fff;
+}
+
+.hero .freepik a {
+   color: #fff;
+}
+.hero .freepik a:hover {
+   color: #dddddd;
+}
+
 #takeMeThere {
    display: flex;
    width: 40%;
@@ -192,7 +206,6 @@ body a {
    border-radius: 12px;
    justify-content: center;
    align-items: center;
-   text-decoration: none;
 }
 
 #takeMeThere:hover {
