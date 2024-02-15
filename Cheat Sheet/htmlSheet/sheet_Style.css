@@ -378,11 +378,16 @@ aside {
 }
 
 .summaryDropdown {
-   background-color: #373737;
+   background-color: var(--preview-main);
    color: #fff;
    border: 0 solid;
    margin: 8px;
-   border-radius: 15px;
+   border-radius: 8px;
+
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
 }
 
 .summaryDropdown-header {
@@ -392,8 +397,15 @@ aside {
 .summaryDropdown-item {
    color: white;
    padding: 8px;
-   background-color: #676767;
+   background-color: var(--preview-secondary);
    border: 0;
+}
+
+.summaryDropdown-item:hover {
+   background-color: var(--preview-scrollbar-hover);
+}
+.summaryDropdown-item:active {
+   background-color: var(--preview-scrollbar-main);
 }
 
 .summaryDropdown .summaryDropdown-item:last-child {

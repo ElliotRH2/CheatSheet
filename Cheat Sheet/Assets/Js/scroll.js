@@ -1,5 +1,9 @@
 function smoothScroll(target, duration) {
    var targetElement = document.getElementById(target);
+   if (!targetElement) {
+      return;
+   }
+
    var headerHeight = document.querySelector('.header').offsetHeight;
    var targetPosition = getOffset(targetElement, headerHeight);
    var startPosition = window.pageYOffset;

@@ -1,8 +1,468 @@
 {
-   "Test 1": {
-      "Html": {
-         "Description": "Root of all elements outside <Document>",
+   "Basic Tags": {
+      "<!DOCTYPE>": {
+         "Description": "Defines the document type",
+         "Id": "#Doctype_Tag"
+      },
+      "<html>": {
+         "Description": "Defines an HTML document",
          "Id": "#Html_Tag"
+      },
+      "<head>": {
+         "Description": "Contains metadata/information for the document",
+         "Id": "#"
+      },
+      "<title>": {
+         "Description": "Defines a title for the document",
+         "Id": "#"
+      },
+      "<body>": {
+         "Description": "Defines the document's body",
+         "Id": "#"
+      },
+      "<h1> to <h6>": {
+         "Description": "Defines HTML headings",
+         "Id": "#"
+      },
+      "<p>": {
+         "Description": "Defines a paragraph",
+         "Id": "#"
+      },
+      "<br>": {
+         "Description": "Inserts a single line break",
+         "Id": "#"
+      },
+      "<hr>": {
+         "Description": "Defines a thematic change in the content",
+         "Id": "#"
+      },
+      "<!--...-->": {
+         "Description": "Defines a comment",
+         "Id": "#"
+      }
+   },
+   "Formatting": {
+      "<abbr>": {
+         "Description": "Defines an abbreviation or an acronym",
+         "Id": "#"
+      },
+      "<address>": {
+         "Description": "Defines contact information for the author/owner of a document/article",
+         "Id": "#"
+      },
+      "<b>": {
+         "Description": "Defines bold text",
+         "Id": "#"
+      },
+      "<bdi>": {
+         "Description": "Isolates a part of text that might be formatted in a different direction from other text outside it",
+         "Id": "#"
+      },
+      "<bdo>": {
+         "Description": "Overrides the current text direction",
+         "Id": "#"
+      },
+      "<blockquote>": {
+         "Description": "Defines a section that is quoted from another source",
+         "Id": "#"
+      },
+      "<cite>": {
+         "Description": "Defines the title of a work",
+         "Id": "#"
+      },
+      "<code>": {
+         "Description": "Defines a piece of computer code",
+         "Id": "#"
+      },
+      "<del>": {
+         "Description": "Defines text that has been deleted from a document",
+         "Id": "#"
+      },
+      "<dfn>": {
+         "Description": "Specifies a term that is going to be defined within the content",
+         "Id": "#"
+      },
+      "<em>": {
+         "Description": "Defines emphasized text",
+         "Id": "#"
+      },
+      "<i>": {
+         "Description": "Defines a part of text in an alternate voice or mood",
+         "Id": "#"
+      },
+      "<ids>": {
+         "Description": "Defines a text that has been inserted into a document",
+         "Id": "#"
+      },
+      "<kbd>": {
+         "Description": "Defines keyboard input",
+         "Id": "#"
+      },
+      "<mark>": {
+         "Description": "Defines marked/highlighted text",
+         "Id": "#"
+      },
+      "<meter>": {
+         "Description": "Defines a scalar measurement within a known range (a gauge)",
+         "Id": "#"
+      },
+      "<pre>": {
+         "Description": "Defines preformatted text",
+         "Id": "#"
+      },
+      "<progress>": {
+         "Description": "Represents the progress of a task",
+         "Id": "#"
+      },
+      "<q>": {
+         "Description": "Defines a short quotation",
+         "Id": "#"
+      },
+      "<rp>": {
+         "Description": "Defines what to show in browsers that do not support ruby annotations",
+         "Id": "#"
+      },
+      "<rt>": {
+         "Description": "Defines an explanation/pronunciation of characters (for East Asian typography)",
+         "Id": "#"
+      },
+      "<ruby>": {
+         "Description": "Defines a ruby annotation (for East Asian typography)",
+         "Id": "#"
+      },
+      "<s>": {
+         "Description": "Defines text that is no longer correct",
+         "Id": "#"
+      },
+      "<samp>": {
+         "Description": "Defines sample output from a computer program",
+         "Id": "#"
+      },
+      "<small>": {
+         "Description": "Defines smaller text",
+         "Id": "#"
+      },
+      "<strong>": {
+         "Description": "Defines important text",
+         "Id": "#"
+      },
+      "<sub>": {
+         "Description": "Defines subscripted text",
+         "Id": "#"
+      },
+      "<sup>": {
+         "Description": "Defines superscripted text",
+         "Id": "#"
+      },
+      "<template>": {
+         "Description": "Defines a container for content that should be hidden when the page loads",
+         "Id": "#"
+      },
+      "<time>": {
+         "Description": "Defines a specific time (or datetime)",
+         "Id": "#"
+      },
+      "<u>": {
+         "Description": "Defines some text that is unarticulated and styled differently from normal text",
+         "Id": "#"
+      },
+      "<var>": {
+         "Description": "Defines a variable",
+         "Id": "#"
+      },
+      "<wbr>": {
+         "Description": "Defines a possible line-break",
+         "Id": "#"
+      }
+   },
+   "Form and Input": {
+      "<form>": {
+         "Description": "Defines an HTML form for user input",
+         "Id": "#"
+      },
+      "<input>": {
+         "Description": "Defines an input control",
+         "Id": "#"
+      },
+      "<textarea>": {
+         "Description": "Defines a multiline input control (text area)",
+         "Id": "#"
+      },
+      "<button>": {
+         "Description": "Defines a clickable button",
+         "Id": "#"
+      },
+      "<select>": {
+         "Description": "Defines a drop-down list",
+         "Id": "#"
+      },
+      "<optgroup>": {
+         "Description": "Defines a group of related options in a drop-down list",
+         "Id": "#"
+      },
+      "<option>": {
+         "Description": "Defines an option in a drop-down list",
+         "Id": "#"
+      },
+      "<label>": {
+         "Description": "Defines a label for an <input> element",
+         "Id": "#"
+      },
+      "<fieldset>": {
+         "Description": "Groups related elements in a form",
+         "Id": "#"
+      },
+      "<legend>": {
+         "Description": "Defines a caption for a <fieldset> element",
+         "Id": "#"
+      },
+      "<datalist>": {
+         "Description": "Specifies a list of pre-defined options for input controls",
+         "Id": "#"
+      },
+      "<output>": {
+         "Description": "Defines the result of a calculation",
+         "Id": "#"
+      }
+   },
+   "Images": {
+      "<img>": {
+         "Description": "Defines an image",
+         "Id": "#"
+      },
+      "<map>": {
+         "Description": "Defines a client-side image map",
+         "Id": "#"
+      },
+      "<area>": {
+         "Description": "Defines an area inside an image map",
+         "Id": "#"
+      },
+      "<canvas>": {
+         "Description": "Used to draw graphics, on the fly, via scripting (usually JavaScript)",
+         "Id": "#"
+      },
+      "<figcaption>": {
+         "Description": "Defines a caption for a <figure> element",
+         "Id": "#"
+      },
+      "<figure>": {
+         "Description": "Specifies self-contained content",
+         "Id": "#"
+      },
+      "<picture>": {
+         "Description": "Defines a container for multiple image resources",
+         "Id": "#"
+      },
+      "<svg>": {
+         "Description": "Defines a container for SVG graphics",
+         "Id": "#"
+      }
+   },
+   "Audio / Video / Frames": {
+      "<audio>": {
+         "Description": "Defines sound content",
+         "Id": "#"
+      },
+      "<source>": {
+         "Description": "Defines multiple media resources for media elements (<video>, <audio> and <picture>)",
+         "Id": "#"
+      },
+      "<track>": {
+         "Description": "verylongtestinDefines text tracks for media elements (<video> and <audio>)gmessage",
+         "Id": "#"
+      },
+      "<video>": {
+         "Description": "Defines a video or movie",
+         "Id": "#"
+      },
+      "<iframe>": {
+         "Description": "Defines an inline frame",
+         "Id": "#"
+      }
+   },
+   "Links": {
+      "<a>": {
+         "Description": "Defines a hyperlink",
+         "Id": "#"
+      },
+      "<link>": {
+         "Description": "Defines the relationship between a document and an external resource (most used to link to style sheets)",
+         "Id": "#"
+      },
+      "<nav>": {
+         "Description": "Defines navigation links",
+         "Id": "#"
+      }
+   },
+   "Lists": {
+      "<menu>": {
+         "Description": "Defines an alternative unordered list",
+         "Id": "#"
+      },
+      "<ul>": {
+         "Description": "Defines an unordered list",
+         "Id": "#"
+      },
+      "<ol>": {
+         "Description": "Defines an ordered list",
+         "Id": "#"
+      },
+      "<li>": {
+         "Description": "Defines a list item",
+         "Id": "#"
+      },
+      "<dl>": {
+         "Description": "Defines a description list",
+         "Id": "#"
+      },
+      "<dt>": {
+         "Description": "Defines a term/name in a description list",
+         "Id": "#"
+      },
+      "<dd>": {
+         "Description": "Defines a description of a term/name in a description list",
+         "Id": "#"
+      }
+   },
+   "Tables": {
+      "<table>": {
+         "Description": "Defines a table",
+         "Id": "#"
+      },
+      "<caption>": {
+         "Description": "Defines a table caption",
+         "Id": "#"
+      },
+      "<th>": {
+         "Description": "Defines a header cell in a table",
+         "Id": "#"
+      },
+      "<tr>": {
+         "Description": "Defines a row in a table",
+         "Id": "#"
+      },
+      "<td>": {
+         "Description": "Defines a cell in a table",
+         "Id": "#"
+      },
+      "<thead>": {
+         "Description": "Groups the header content in a table",
+         "Id": "#"
+      },
+      "<tbody>": {
+         "Description": "Groups the body content in a table",
+         "Id": "#"
+      },
+      "<tfoot>": {
+         "Description": "Groups the footer content in a table",
+         "Id": "#"
+      },
+      "<col>": {
+         "Description": "Specifies column properties for each column within a <colgroup> element",
+         "Id": "#"
+      },
+      "<colgroup>": {
+         "Description": "Specifies a group of one or more columns in a table for formatting",
+         "Id": "#"
+      }
+   },
+   "Styles and Semantics": {
+      "<style>": {
+         "Description": "Defines style information for a document",
+         "Id": "#"
+      },
+      "<div>": {
+         "Description": "Defines a section in a document",
+         "Id": "#"
+      },
+      "<span>": {
+         "Description": "Defines a section in a document",
+         "Id": "#"
+      },
+      "<header>": {
+         "Description": "Defines a header for a document or section",
+         "Id": "#"
+      },
+      "<hgroup>": {
+         "Description": "Defines a header and related content",
+         "Id": "#"
+      },
+      "<footer>": {
+         "Description": "Defines a footer for a document or section",
+         "Id": "#"
+      },
+      "<main>": {
+         "Description": "Specifies the main content of a document",
+         "Id": "#"
+      },
+      "<section>": {
+         "Description": "Defines a section in a document",
+         "Id": "#"
+      },
+      "<search>": {
+         "Description": "Defines a search section",
+         "Id": "#"
+      },
+      "<article>": {
+         "Description": "Defines an article",
+         "Id": "#"
+      },
+      "<aside>": {
+         "Description": "Defines content aside from the page content",
+         "Id": "#"
+      },
+      "<details>": {
+         "Description": "Defines additional details that the user can view or hide",
+         "Id": "#"
+      },
+      "<dialog>": {
+         "Description": "Defines a dialog box or window",
+         "Id": "#"
+      },
+      "<summary>": {
+         "Description": "Defines a visible heading for a <details> element",
+         "Id": "#"
+      },
+      "<data>": {
+         "Description": "Adds a machine-readable translation of a given content",
+         "Id": "#"
+      }
+   },
+   "Meta Info": {
+      "<head>": {
+         "Description": "Defines information about the document",
+         "Id": "#"
+      },
+      "<meta>": {
+         "Description": "Defines metadata about an HTML document",
+         "Id": "#"
+      },
+      "<base>": {
+         "Description": "Specifies the base URL/target for all relative URLs in a document",
+         "Id": "#"
+      }
+   },
+   "Programming": {
+      "<script>": {
+         "Description": "Defines a client-side script",
+         "Id": "#"
+      },
+      "<noscript>": {
+         "Description": "Defines an alternate content for users that do not support client-side scripts",
+         "Id": "#"
+      },
+      "<embed>": {
+         "Description": "Defines a container for an external (non-HTML) application",
+         "Id": "#"
+      },
+      "<object>": {
+         "Description": "Defines an embedded object",
+         "Id": "#"
+      },
+      "<param>": {
+         "Description": "Defines a parameter for an object",
+         "Id": "#"
       }
    }
-} 
+}

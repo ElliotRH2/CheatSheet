@@ -18,7 +18,8 @@ function Refresh() {
       var categoryKeys = Object.keys(json);
       
       var categoryAmount = categoryKeys.length;
-   
+      
+      var tooltip = document.getElementById('tooltip');
       var test = document.querySelector(".summaryContainer");
       test.innerHTML = '';
    
@@ -69,25 +70,34 @@ function Refresh() {
          innerDiv.appendChild(itemDiv);
    
          for(var subcategory in json[category]) {
-            var contentDiv = document.createElement("a");
-            contentDiv.className = "summaryDropdown-item";
-            contentDiv.textContent = subcategory;
-            contentDiv.style.display = "none";
-            contentDiv.href = json[category][subcategory].Id;
+            var Id = json[category][subcategory].Id;
+
+            var contentAnchor = document.createElement("a");
+            contentAnchor.className = "summaryDropdown-item";
+            contentAnchor.textContent = subcategory;
+            contentAnchor.style.display = "none";
+            contentAnchor.href = (Id.startsWith("#") && Id !== "#") ? Id : "";
+
+            var descDiv = document.createElement("div");
+            descDiv.className = "summaryDropdown-item";
+            descDiv.textContent = subcategory;
+            descDiv.style.display = "none";
             
-            (function(contentDiv) {
+            (function(contentAnchor, descDiv) {
                itemDiv.addEventListener('click', function() {
-                  contentDiv.style.display = (contentDiv.style.display === "none") ? "block" : "none";
+                  contentAnchor.style.display = (contentAnchor.style.display === "none") ? "block" : "none";
+                  descDiv.style.display = "none";
                });
-               contentDiv.addEventListener('click', function (e) {
-                  e.preventDefault();
+               contentAnchor.addEventListener('click', function (event) {
+                  event.preventDefault();
                   
                   var targetId = this.getAttribute('href').substring(1);
                   smoothScroll(targetId, 1000);
                });
-            })(contentDiv);
-   
-            innerDiv.appendChild(contentDiv);
+            })(contentAnchor);
+            
+            contentAnchor.appendChild(descDiv);
+            innerDiv.appendChild(contentAnchor);
          }
          
          totalRows += 1;
