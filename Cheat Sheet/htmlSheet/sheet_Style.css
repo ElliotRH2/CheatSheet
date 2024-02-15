@@ -522,9 +522,11 @@ footer .copyright p {
 
 @media screen and (max-width: 950px) {
    .mainCard_Right {
+      margin-left: 15px;
+      margin-right: -15px;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: end;
       margin-top: 1rem;
       height: auto;
    }
@@ -536,15 +538,18 @@ footer .copyright p {
 
    
    .mainCard_Right .Title, .mainCard_Right .Description, .mainCard_Right .Note {
-      padding: 0;
-      text-align: center;
+      margin: 0;
+      margin-right: 25px;
+      text-align: end;
       width: 50%;
    }
    
    .mainCard_Left {
+      margin-left: -15px;
+      margin-right: 15px;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: start;
       margin-top: 1rem;
       height: auto;
    }
@@ -556,7 +561,8 @@ footer .copyright p {
 
    .mainCard_Left .Title, .mainCard_Left .Description, .mainCard_Left .Note {
       padding: 0;
-      text-align: center;
+      margin-left: 25px;
+      text-align: start;
       width: 50%;
    }
 }
