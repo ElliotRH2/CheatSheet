@@ -314,8 +314,23 @@ body {
   width: 100px;
   height: 60px;
   background-color: #3498db;
-  border: 2px solid #2980b9;
+  border: 10px solid #2980b9;
   transition: all 0.5s ease;
+}
+
+.containerBox3 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+
+.textElement {
+  display: flex;
+  align-items: center;
+  background-color: #3498db;
+  color: white;
+  padding: 5px;
+  width: 400px;
 }
 
 input[type="number"] {
