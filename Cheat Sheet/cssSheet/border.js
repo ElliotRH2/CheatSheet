@@ -1,3 +1,4 @@
+/* Border Radius, Size and padding selectros */
 const radiusInput = document.getElementById('radiusInput');
 const borderSizeInput = document.getElementById('borderSizeInput');
 const paddingInput = document.getElementById('paddingInput')
@@ -55,6 +56,7 @@ borderSizeInput.addEventListener('keypress', (event) => {
     }
   });
 
+/* Font Selector */
 const fontSelect = document.getElementById('fontSelect');
 const textElement = document.getElementById('textElement');
 const boldCheckbox = document.getElementById('boldCheckbox');
@@ -74,21 +76,32 @@ function applyFontStyles() {
   textElement.style.fontFamily = selectedFont;
 }
 
+
+/* Gradient Maker */
 const color1GradInput = document.getElementById('color1Grad');
 const color2GradInput = document.getElementById('color2Grad');
+const color3GradInput = document.getElementById('color3Grad'); 
 const directionSelect = document.getElementById('direction');
 const gradientPreview = document.getElementById('gradientPreview');
+const cssCodeDisplay = document.getElementById('cssCode'); 
 
 function updateGradient() {
   const color1Grad = color1GradInput.value;
   const color2Grad = color2GradInput.value;
+  const color3Grad = color3GradInput.value; 
   const direction = directionSelect.value;
 
-  gradientPreview.style.background = `linear-gradient(${direction}, ${color1Grad}, ${color2Grad})`;
+  gradientPreview.style.background = `linear-gradient(${direction}, ${color1Grad}, ${color2Grad}, ${color3Grad})`; 
+
+  cssCodeDisplay.textContent = `background: linear-gradient(${direction}, ${color1Grad}, ${color2Grad}, ${color3Grad});`;
 }
 
 color1GradInput.addEventListener('input', updateGradient);
 color2GradInput.addEventListener('input', updateGradient);
+color3GradInput.addEventListener('input', updateGradient); 
 directionSelect.addEventListener('change', updateGradient);
 
 updateGradient();
+
+
+

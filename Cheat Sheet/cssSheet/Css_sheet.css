@@ -361,8 +361,17 @@ input[type="number"] {
   margin: 20px;
 }
 
-#color1Grad, #color2Grad {
+#color1Grad, #color2Grad, #color3Grad {
   border: none;
+}
+
+.gradTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.css-code {
+  color: #454545;
 }
 
 /* Footer */

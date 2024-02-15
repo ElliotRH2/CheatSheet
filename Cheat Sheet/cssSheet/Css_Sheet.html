@@ -37,6 +37,10 @@
             <a><img src="./../Assets/Vfx/arrow.svg" alt="">Examples</a>
             <div class = "dropdown">
                <a href="#color"><div>Color Picker</div></a>
+               <a href="#borderExample"><div>Border Size & Radius</div></a>
+               <a href="#paddingExample"><div>Padding</div></a>
+               <a href="#textElement"><div>Fonts</div></a>
+               <a href="#gradientExample"><div>Gradient</div></a>
             </div>
          </div>
          <div class="sidelist-item"><a href="#sheet">Sheet</a></div>
@@ -195,7 +199,7 @@
 
       <div class="containerBox">
          <div id="borderBox" class="borderBox">
-            <p class="example2">Try border radius & size</p>
+            <p class="example2" id="borderExample">Try border radius & size</p>
          </div>
          <div class="inputs">
             <input type="number" id="radiusInput" placeholder="Enter border radius">
@@ -216,7 +220,7 @@
 
       <div class="containerBox2">
          <div id="borderBox2" class="borderBox2">
-            <p class="example2">Try padding</p>
+            <p class="example2" id="paddingExample">Try padding</p>
          </div>
          <div class="inputs">
             <label for="paddingInput">Padding:</label>
@@ -255,22 +259,18 @@
          </div>
        </div>
 
+       <p class="gradTitle" id="gradientExample">Make a gradient</p>
        <div class="containerGradient">
          <div class="gradientPreview" id="gradientPreview"></div>
          <div class="inputs">
-           <label for="color1">Color 1:</label>
-           <input type="color" id="color1Grad" value="#ff0000">
+           <label for="color1Grad">Color 1:</label>
+           <input type="color" id="color1Grad" value="#5252ff">
        
-           <label for="color2">Color 2:</label>
-           <input type="color" id="color2Grad" value="#00ff00">
-
-           <label for="numColors">Number of Colors:</label>
-         <select id="numColors">
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-         </select>
+           <label for="color2Grad">Color 2:</label>
+           <input type="color" id="color2Grad" value="#ba52ff">
+       
+           <label for="color3Grad">Color 3:</label>
+           <input type="color" id="color3Grad" value="#ff7b2e">
        
            <label for="direction">Direction:</label>
            <select id="direction">
@@ -284,8 +284,10 @@
              <option value="to bottom left">To Bottom Left</option>
            </select>
          </div>
-       </div>       
-      
+         <p>CSS code:</p>
+         <div class="css-code" id="cssCode"></div>
+       </div>
+              
       <div class="preview-container">
          <div class="preview-top">
             <h2 id="sheet">Basic CSS cheat sheet</h2>
