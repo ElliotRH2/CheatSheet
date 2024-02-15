@@ -365,8 +365,40 @@ aside {
    grid-row-end: 3;
 }
 
-@media screen and (max-width: 500px) {
-   
+.summaryContainer {
+   display: flex;
+   width: 100%;
+   height: auto;
+}
+
+.summaryCollumn {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+}
+
+.summaryDropdown {
+   background-color: #373737;
+   color: #fff;
+   border: 0 solid;
+   margin: 8px;
+   border-radius: 15px;
+}
+
+.summaryDropdown-header {
+   padding: 8px;
+}
+
+.summaryDropdown-item {
+   color: white;
+   padding: 8px;
+   background-color: #676767;
+   border: 0;
+}
+
+.summaryDropdown .summaryDropdown-item:last-child {
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
 }
 
 /* Footer */

@@ -10,7 +10,7 @@
    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/800px-HTML5_Badge.svg.png">
    <link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/800px-HTML5_Badge.svg.png">
 
-   <!-- Google Tag Manager -->
+   <!--#region  Google Tag Manager -->
    <script>
       (function (w, d, s, l, i) {
          w[l] = w[l] || []; w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
@@ -22,7 +22,7 @@
          f.parentNode.insertBefore(j, f);
       })(window, document, 'script', 'dataLayer', 'GTM-NN5FG6H');
    </script>
-   <!-- End Google Tag Manager -->
+   <!--#endregion End Google Tag Manager -->
 </head>
 <head>
    <meta charset="UTF-8">
@@ -52,21 +52,7 @@
          <div class="sidealist-item" id="Dropdown">
             <a><img src="./../Assets/Vfx/arrow.svg" alt="">Tags</a>
             <div class = "dropdown">
-               <a href="#Basic"><div>Basic</div></a>
-               <a href="#ItemTest"><div>Item</div></a>
-               <a href="#ItemTest"><div>Item</div></a>
-               <a href="#ItemTest"><div>Item</div></a>
-               <a href="#ItemTest"><div>Item</div></a>
-            </div>
-         </div>
-         <div class="sidealist-item" id="Dropdown">
-            <a><img src="./../Assets/Vfx/arrow.svg" alt="">Advanced</a>
-            <div class = "dropdown">
-               <a href="#ItemTest"><div>Item</div></a>
-               <a href="#ItemTest"><div>Item</div></a>
-               <a href="#ItemTest"><div>Item</div></a>
-               <a href="#ItemTest"><div>Item</div></a>
-               <a href="#ItemTest"><div>Item</div></a>
+               <a href="#Html_Tag"><div>Html</div></a>
             </div>
          </div>
          <div class="sidelist-item"><a href="#Summary">Summary</a></div>
@@ -77,7 +63,7 @@
    <!--#region Main Content-->
    <div class="main">
       <div class="mainCard_Hero">
-         <div class="Title" id="Hero">&lt;html&gt; Element</div>
+         <div class="Title" id="Introduction">Introduction</div>
          <div class="Description">
             <p>The &lt;html&gt; tag represents the root of an HTML document, and is the container for all other HTML elements (except for the &lt;!DOCTYPE&gt; tag).</p>
          </div>
@@ -104,7 +90,7 @@
          
       </div>
       <div class="mainCard_Centre">
-         <div class="Title" id="Introduction">&lt;html&gt; Element</div>
+         <div class="Title" id="Html_Tag">&lt;html&gt; Element</div>
          <div class="Description">
             <p>The &lt;html&gt; tag represents the root of an HTML document, and is the container for all other HTML elements (except for the &lt;!DOCTYPE&gt; tag).</p>
          </div>
@@ -183,7 +169,7 @@
          </div>
       </div>
 
-      <object id="Summary" data="https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf" type="application/pdf" style="width: 100%; height: 83vh;"></object>
+      <div class="summaryContainer" id="Summary"></div>
    </div>
    <!--#endregion-->
    
@@ -231,5 +217,6 @@
    <script src="./../Assets/Js/Sheet Previews/Html_Previews.js"></script>
    <script src="./../Assets/Js/Sheet.js"></script>
    <script src="./../Assets/Js/scroll.js"></script>
+   <script src="./../Assets/Js/Summary.js"></script>
 </body>
 </html>
