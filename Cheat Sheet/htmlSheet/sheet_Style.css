@@ -571,8 +571,7 @@ footer .copyright p {
       float: none;
    }
    .main {
-      margin-left: 0;
-      margin-right: 0;
+      margin-left: 15px;
    }
    .sidenav {
       left: -15rem;

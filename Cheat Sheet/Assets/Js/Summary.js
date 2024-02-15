@@ -98,7 +98,7 @@ function Refresh() {
             if (gotoAnchor) {
                descDiv.style.borderRadius = "8px 8px 0 0";
                descDiv.style.marginBottom = "0";
-               gotoAnchor.style.borderRadius = "0 0 8px 8px";
+               gotoAnchor.style.borderRadius = "0";
                gotoAnchor.style.marginTop = "0";
             } else {
                descDiv
