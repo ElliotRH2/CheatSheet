@@ -202,12 +202,42 @@
       
       <div class="colorContainer">
          <div id="colorDiv">
-               <input type="color" id="colorPicker" value="#5252ff">
+               <input type="color" id="colorPicker" value="#ff7b2e">
          </div>
          
       </div>
       <span id="rgbValues"></span>
       <span id="hexValue"></span>
+
+      <div class="containerBox">
+         <div id="borderBox" class="borderBox">
+            <p class="example2">Try border radius & size</p>
+         </div>
+         <div class="inputs">
+            <input type="number" id="radiusInput" placeholder="Enter border radius">
+            <input type="number" id="borderSizeInput" placeholder="Enter border size">
+            <select id="borderStyleInput">
+               <option value="solid">Solid</option>
+               <option value="dashed">Dashed</option>
+               <option value="dotted">Dotted</option>
+               <option value="double">Double</option>
+               <option value="groove">Groove</option>
+               <option value="ridge">Ridge</option>
+               <option value="inset">Inset</option>
+               <option value="outset">Outset</option>
+               <option value="hidden">Hidden</option>
+            </select>
+         </div>
+      </div>
+
+      <div class="containerBox">
+         <div id="borderBox2" class="borderBox">
+            <p class="example2">Try padding</p>
+         </div>
+         <div class="inputs">
+            <input type="number" id="paddingInput" placeholder="Enter padding size">
+         </div>
+      </div>
       
       <div class="preview-container">
          <div class="preview-top">
@@ -283,5 +313,6 @@
    <script src="./../Assets/Js/scroll.js"></script>
 
    <script src="./script.js"></script>
+   <script src="./border.js"></script>
 </body>
 </html>
