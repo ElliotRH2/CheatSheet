@@ -72,7 +72,7 @@ borderSizeInput.addEventListener('keypress', (event) => {
     }
   });
 
-/* Reset values when deselecting */
+/* Reset values when deselecting OPTIONAL
 radiusInput.addEventListener('blur', () => {
     borderBox.style.borderRadius = '0';
     radiusInput.value = '';
@@ -87,6 +87,7 @@ paddingInput.addEventListener('blur', () => {
     borderBox2.style.padding = '0';
     paddingInput.value = '';
   });
+*/
 
 /* Font Selector */
 const fontSelect = document.getElementById('fontSelect');
