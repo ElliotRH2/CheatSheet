@@ -7,6 +7,7 @@ const borderBox2 = document.getElementById('borderBox2')
 
 const maxBorder = 50
 const maxPadding = 100
+const maxRadius = 100
 
 radiusInput.addEventListener('input', () => {
     const radiusValue = radiusInput.value + 'px';
@@ -28,6 +29,7 @@ paddingInput.addEventListener('input', () => {
     borderBox2.style.padding = paddingValue;
   });
 
+/* Max values */
 paddingInput.addEventListener('input', () => {
     let value = parseInt(paddingInput.value);
     if (value > maxPadding) {
@@ -49,11 +51,41 @@ borderSizeInput.addEventListener('input', () => {
     }
   });
 
+  radiusInput.addEventListener('keypress', (event) => {
+    let value = parseInt(radiusInput.value + event.key);
+    if (value > maxRadius) {
+      event.preventDefault();
+    }
+  });
+  
+radiusInput.addEventListener('input', () => {
+    let value = parseInt(radiusInput.value);
+    if (value > maxRadius) {
+      radiusInput.value = maxRadius;
+    }
+  });
+
 borderSizeInput.addEventListener('keypress', (event) => {
     let value = parseInt(borderSizeInput.value + event.key);
     if (value > maxBorder) {
       event.preventDefault();
     }
+  });
+
+/* Reset values when deselecting */
+radiusInput.addEventListener('blur', () => {
+    borderBox.style.borderRadius = '0';
+    radiusInput.value = '';
+  });
+
+borderSizeInput.addEventListener('blur', () => {
+    borderBox.style.borderWidth = '0';
+    borderSizeInput.value = '';
+  });
+
+paddingInput.addEventListener('blur', () => {
+    borderBox2.style.padding = '0';
+    paddingInput.value = '';
   });
 
 /* Font Selector */
@@ -75,7 +107,6 @@ function applyFontStyles() {
   const selectedFont = fontSelect.value;
   textElement.style.fontFamily = selectedFont;
 }
-
 
 /* Gradient Maker */
 const color1GradInput = document.getElementById('color1Grad');
