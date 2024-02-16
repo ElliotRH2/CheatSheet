@@ -151,7 +151,6 @@ body a {
 .hero {
    height: calc(100vh - 89px);
    width: calc(100% - 15rem);
-   background-color: red;
    padding: 0;
    margin: 0;
    margin-left: 15rem;
@@ -182,20 +181,6 @@ body a {
    color: var(--css-button-colour);
 }
 
-.hero .freepik {
-   position: absolute;
-   top: 80px;
-   right: 10px;
-   color: #fff;
-}
-
-.hero .freepik a {
-   color: #fff;
-}
-.hero .freepik a:hover {
-   color: #eee;
-}
-
 #takeMeThere {
    display: flex;
    width: 40%;
@@ -213,7 +198,10 @@ body a {
 }
 
 .mainCard_Centre, .mainCard_Left, .mainCard_Right {
-   margin-bottom: 30vh;
+   margin-bottom: 40vh;
+}
+.mainCard_Centre .Title, .mainCard_Left .Title, .mainCard_Right .Title {
+   padding-top: 10vh;
 }
 
 .preview-container {
@@ -281,7 +269,6 @@ body a {
    margin: 0.75rem;
    height: 100%;
    overflow: hidden;
-   overflow-x: scroll;
 }
 
 .preview-container pre::-webkit-scrollbar {

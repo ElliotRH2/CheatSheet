@@ -2,7 +2,7 @@
    "Basic Tags": {
       "<!DOCTYPE>": {
          "Description": "Defines the document type",
-         "Id": "#Doctype_Tag"
+         "Id": "#"
       },
       "<html>": {
          "Description": "Defines an HTML document",
@@ -10,35 +10,35 @@
       },
       "<head>": {
          "Description": "Contains metadata/information for the document",
-         "Id": "#"
+         "Id": "#Head_Tag"
       },
       "<title>": {
          "Description": "Defines a title for the document",
-         "Id": "#"
+         "Id": "#Title_tag"
       },
       "<body>": {
          "Description": "Defines the document's body",
-         "Id": "#"
+         "Id": "#Body_Tag"
       },
       "<h1> to <h6>": {
          "Description": "Defines HTML headings",
-         "Id": "#"
+         "Id": "#Headings_Tag"
       },
       "<p>": {
          "Description": "Defines a paragraph",
-         "Id": "#"
+         "Id": "#P_Tag"
       },
       "<br>": {
          "Description": "Inserts a single line break",
-         "Id": "#"
+         "Id": "#Br_Tag"
       },
       "<hr>": {
          "Description": "Defines a thematic change in the content",
-         "Id": "#"
+         "Id": "#Hr_Tag"
       },
       "<!--...-->": {
          "Description": "Defines a comment",
-         "Id": "#"
+         "Id": "#Comment_Tag"
       }
    },
    "Formatting": {

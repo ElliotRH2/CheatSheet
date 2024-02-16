@@ -31,9 +31,17 @@
       <div class="sidelist">
          <div class="sidelist-item"><a href="#Introduction">Introduction</a></div>
          <div class="sidealist-item" id="Dropdown">
-            <a><img src="./../Assets/Vfx/arrow.svg" alt="">Tags</a>
+            <a><img src="./../Assets/Vfx/arrow.svg" alt="">Basic Tags</a>
             <div class = "dropdown">
                <a href="#Html_Tag"><div>&lt;html&gt;</div></a>
+               <a href="#Head_Tag"><div>&lt;head&gt;</div></a>
+               <a href="#Title_Tag"><div>&lt;title&gt;</div></a>
+               <a href="#Body_Tag"><div>&lt;body&gt;</div></a>
+               <a href="#Headings_Tag"><div>&lt;h1&gt; to &lt;h6&gt;</div></a>
+               <a href="#Paragraph_Tag"><div>&lt;p&gt;</div></a>
+               <a href="#Br_Tag"><div>&lt;br&gt;</div></a>
+               <a href="#Hr_Tag"><div>&lt;hr&gt;</div></a>
+               <a href="#Comment_Tag"><div>&lt;!--...--&gt;</div></a>
             </div>
          </div>
          <div class="sidelist-item"><a href="#Summary">Summary</a></div>
@@ -41,17 +49,17 @@
    </div>
    <!--#endregion-->
    
+   <!--#region Introduction-->
    <div class="hero" id="Introduction">
       <div class="content">
          <h1>Introduction</h1>
          <p>In-depth explanation on various elements is just a scroll away<br>regardless of whether you are a beginner or not.</p>
          <p>You can also find referal buttons on the left side of the screen that lead to different sections of the page for quick and easy access.</p>
          <p>But if you are in need of a simple list of elements, you can either click on the "Take me there" button down below or the "Summary" text on the left side of the screen.</p>
-         <a href="#Summary" id="takeMeThere" onclick="smoothScroll('Summary', 1000)">Take me there</a>
+         <a id="takeMeThere" onclick="smoothScroll('Summary', 1000)">Take me there</a>
       </div>
-
-      <p class="freepik"><a href="https://www.freepik.com/free-vector/abstract-watercolor-background_17539354.htm">Image by Creative_hat</a> on Freepik</p>
    </div>
+   <!--#endregion-->
 
    <!--#region Main Content-->
    <div class="main">
@@ -76,21 +84,22 @@
             </div>
             <div class="preview">
                <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
-               <pre id="code_1"></pre></div>
+               <pre id="code_Html"></pre></div>
          </div>
          <div class="Note">
             <p>Note:<br>You should always include the lang attribute inside<br>the &lt;html&gt; tag, to declare the language of the Web page.<br>This is meant to assist search engines and browsers.</p>
          </div>
-         
       </div>
       <div class="mainCard_Right">
-         <div class="Title">&lt;html&gt; Element</div>
+         <div class="Title" id="Head_Tag">&lt;head&gt; Element</div>
          <div class="Description">
-            <p>The &lt;html&gt; tag represents the root of an HTML document, and is the container for all other HTML elements (except for the &lt;!DOCTYPE&gt; tag).</p>
+            <p>
+               The &lt;head&gt; element contains general information about an HTML page that isn’t displayed on the page itself. This information is called metadata and includes things like the title of the HTML document and links to stylesheets.
+            </p>
          </div>
          <div class="preview-container">
             <div class="preview-top">
-               <h2>Html</h2>
+               <h2>Html / Css</h2>
                <div class="preview-mode">
                   
                </div>
@@ -103,16 +112,37 @@
             </div>
             <div class="preview">
                <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
-               <pre id="code_2"></pre></div>
-         </div>
-         <div class="Note">
-            <p>Note: You should always include the lang attribute inside the &lt;html&gt; tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</p>
+               <pre id="code_Head"></pre>
+            </div>
          </div>
       </div>
       <div class="mainCard_Left">
-         <div class="Title" id="Introduction">&lt;html&gt; Element</div>
+         <div class="Title" id="Title_Tag">&lt;title&gt; Element</div>
          <div class="Description">
             <p>The &lt;html&gt; tag represents the root of an HTML document, and is the container for all other HTML elements (except for the &lt;!DOCTYPE&gt; tag).</p>
+         </div>
+         <div class="preview-container">
+            <div class="preview-top">
+               <h2>Html</h2>
+               <div class="preview-mode">
+                  
+               </div>
+               <div class="preview-options">
+                  <button id="Copy_Code">Copy</button>
+               </div>
+            </div>
+            <div class="preview">
+               <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
+               <pre id="code_Title"></pre>
+            </div>
+         </div>
+      </div>
+      <div class="mainCard_Left">
+         <div class="Title" id="Body_Tag">&lt;body&gt; Element</div>
+         <div class="Description">
+            <p>
+               The &lt;body&gt; element represents the content of an HTML document. Content inside &lt;body&gt; tags are rendered on the web browsers.
+            </p>
          </div>
          <div class="preview-container">
             <div class="preview-top">
@@ -129,10 +159,145 @@
             </div>
             <div class="preview">
                <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
-               <pre id="code_4"></pre></div>
+               <pre id="code_Body"></pre>
+            </div>
          </div>
          <div class="Note">
-            <p>Note: You should always include the lang attribute inside the &lt;html&gt; tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</p>
+            <p>Note: There can be only one &lt;body&gt; element in a document</p>
+         </div>
+      </div>
+      <div class="mainCard_Right">
+         <div class="Title" id="Headings_Tag">&lt;h1&gt; to &lt;h6&gt; Elements</div>
+         <div class="Description">
+            <p>
+               HTML can use six different levels of heading elements. The heading elements are ordered from the highest level &lt;h1&gt; to the lowest level &lt;h6&gt;.
+            </p>
+         </div>
+         <div class="preview-container">
+            <div class="preview-top">
+               <h2>Html</h2>
+               <div class="preview-mode">
+                  
+               </div>
+               <div class="preview-options">
+                  <button id="Preview_Code">Preview</button>
+                  <button id="Edit_Code">Edit</button>
+                  <button id="Reset_Code">Reset</button>
+                  <button id="Copy_Code">Copy</button>
+               </div>
+            </div>
+            <div class="preview">
+               <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
+               <pre id="code_Headings"></pre>
+            </div>
+         </div>
+      </div>
+      <div class="mainCard_Right">
+         <div class="Title" id="Paragraph_Tag">&lt;P&gt; Element</div>
+         <div class="Description">
+            <p>
+               The &lt;P&gt; paragraph element contains and displays a block of text.
+            </p>
+         </div>
+         <div class="preview-container">
+            <div class="preview-top">
+               <h2>Html</h2>
+               <div class="preview-mode">
+                  
+               </div>
+               <div class="preview-options">
+                  <button id="Preview_Code">Preview</button>
+                  <button id="Edit_Code">Edit</button>
+                  <button id="Reset_Code">Reset</button>
+                  <button id="Copy_Code">Copy</button>
+               </div>
+            </div>
+            <div class="preview">
+               <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
+               <pre id="code_Paragraph"></pre>
+            </div>
+         </div>
+      </div>
+      <div class="mainCard_Centre">
+         <div class="Title" id="Br_Tag">&lt;Br&gt; Element</div>
+         <div class="Description">
+            <p>
+               The &lt;Br&gt; line break element will create a line break in text and is especially useful where a division of text is required, like in a postal address. The line break element requires only an opening tag and must not have a closing tag.
+            </p>
+         </div>
+         <div class="preview-container">
+            <div class="preview-top">
+               <h2>Html</h2>
+               <div class="preview-mode">
+                  
+               </div>
+               <div class="preview-options">
+                  <button id="Preview_Code">Preview</button>
+                  <button id="Edit_Code">Edit</button>
+                  <button id="Reset_Code">Reset</button>
+                  <button id="Copy_Code">Copy</button>
+               </div>
+            </div>
+            <div class="preview">
+               <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
+               <pre id="code_Br"></pre>
+            </div>
+         </div>
+      </div>
+      <div class="mainCard_Left">
+         <div class="Title" id="Hr_Tag">&lt;Hr&gt; Element</div>
+         <div class="Description">
+            <p>
+               The &lt;Br&gt; line break element will create a line break in text and is especially useful where a division of text is required, like in a postal address. The line break element requires only an opening tag and must not have a closing tag.
+            </p>
+         </div>
+         <div class="preview-container">
+            <div class="preview-top">
+               <h2>Html</h2>
+               <div class="preview-mode">
+                  
+               </div>
+               <div class="preview-options">
+                  <button id="Preview_Code">Preview</button>
+                  <button id="Edit_Code">Edit</button>
+                  <button id="Reset_Code">Reset</button>
+                  <button id="Copy_Code">Copy</button>
+               </div>
+            </div>
+            <div class="preview">
+               <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
+               <pre id="code_Hr"></pre>
+            </div>
+         </div>
+      </div>
+      <div class="mainCard_Right">
+         <div class="Title" id="Comment_Tag">&lt;!--...--&gt; Comment Tag</div>
+         <div class="Description">
+            <p>
+               In HTML, comments can be added between an opening &lt;!-- and closing --&gt;. Content inside of comments will not be rendered by browsers, and are usually used to describe a part of code or provide other details.
+               Comments can span single or multiple lines.
+            </p>
+         </div>
+         <div class="preview-container">
+            <div class="preview-top">
+               <h2>Html</h2>
+               <div class="preview-mode">
+                  
+               </div>
+               <div class="preview-options">
+                  <button id="Preview_Code">Preview</button>
+                  <button id="Edit_Code">Edit</button>
+                  <button id="Reset_Code">Reset</button>
+                  <button id="Copy_Code">Copy</button>
+               </div>
+            </div>
+            <div class="preview">
+               <iframe id="preview" style="display: none; border: 0 solid black;"></iframe>
+               <pre id="code_Comment"></pre>
+            </div>
+         </div>
+         <div class="Note">
+            <p>Note:<br>You can also do <br>&lt;!--#region (name)--&gt; and &lt;!--#endregion--&gt;<br> between elements to visually hide the code in the visual studio editor</p>
          </div>
       </div>
       <!--#endregion-->
@@ -165,7 +330,7 @@
                <li><a href="#faq">F.A.Q</a></li>
                <li><a href="#cookies-policy">Cookies Policy</a></li>
                <li><a href="#terms-of-services">Terms Of Service</a></li>
-               <li><a href="#support">Support</a></li>
+               <li><a href="https://www.freepik.com/free-vector/abstract-watercolor-background_17539354.htm">image by Creative_hat</a></li>
             </ul>
          </div>
       </div>
@@ -175,7 +340,6 @@
             <a href="/index.html">Home</a>
             <a href="Html_Sheet.html">HTML</a>
             <a href="../cssSheet/Css_Sheet.html">CSS</a>
-            <a href="">Social</a>
          </div>
          <p>Copyright &copy; 2025 CheatSheet</p>
       </div>

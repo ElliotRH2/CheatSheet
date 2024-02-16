@@ -57,11 +57,6 @@ document.querySelectorAll(".preview [id^='code']").forEach(function(item) {
             item.scrollTop = boundedScrollTop;
          }
       });
-      if (item.scrollWidth > item.clientWidth) {
-         item.style.overflowX = 'scroll';
-       } else {
-         item.style.overflowX = 'hidden';
-       }
 
       const copyButton = header.querySelector("#Copy_Code");
       const previewButton = header.querySelector("#Preview_Code");
@@ -101,9 +96,9 @@ document.querySelectorAll(".preview [id^='code']").forEach(function(item) {
          } else
          {
             const rect = item.getBoundingClientRect();
-      
-            iframe.style.width = rect.width + 'px';
-            iframe.style.height = rect.height + 'px';
+            
+            iframe.style.width = '95%';
+            iframe.style.height = (rect.height - 10) + 'px';
             iframe.style.backgroundColor = 'white';
             iframe.style.margin = '0.75rem';
             iframe.style.marginBottom = '0';
@@ -173,6 +168,10 @@ document.querySelectorAll(".preview [id^='code']").forEach(function(item) {
                element.addEventListener('click', togglePreview);
            });
          }
+      }
+
+      if (item.scrollWidth > item.clientWidth) {
+         item.style.overflowX = 'scroll';
       }
    }
 });
