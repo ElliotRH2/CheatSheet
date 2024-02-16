@@ -172,7 +172,8 @@ body {
 
 .preview-container {
     background-color: #0D0D0D;
-    width: 30rem;
+    width: 93%;
+    max-width: 30rem;
     height: auto;
     margin: 1rem;
     border-radius: 10px;
